@@ -1,4 +1,4 @@
-import Daiverse1 from "../assets/daiverse1.png";
+import Daiverse1 from "../assets/daiverselanding.png";
 import cocaine from "../assets/cocaine.jpeg";
 import colorado from "../assets/colorado.jpg";
 import sweetdaddy from "../assets/sweetdaddy.jpg";
@@ -74,7 +74,7 @@ export function LandingPage() {
         </SwiperSlide>
        
 
-        <div className="slider-controler mt-[-6rem]">
+        <div className="slider-controler hidden mt-[-6rem]">
           <div className="swiper-button-prev slider-arrow">
             <ion-icon name="arrow-back-outline"></ion-icon>
           </div>

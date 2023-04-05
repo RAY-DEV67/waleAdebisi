@@ -186,3 +186,16 @@ body {
 .musics{
   box-shadow: 0px 0px 20px black
 }
+.main{
+  animation: zoom-in-fade 2s ease-in-out;
+}
+@keyframes zoom-in-fade {
+  0% {
+    transform: scale(0.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
