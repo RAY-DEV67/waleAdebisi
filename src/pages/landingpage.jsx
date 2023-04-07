@@ -4,7 +4,7 @@ import colorado from "../assets/colorado.jpg";
 import sweetdaddy from "../assets/sweetdaddy.jpg";
 import sweetdaddyremix from "../assets/sweetdaddyremix.jpeg";
 import ReactPlayer from "react-player";
-// Import Swiper React components
+// Import Swiper React components now
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
