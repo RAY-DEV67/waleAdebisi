@@ -1,4 +1,4 @@
-import Daiverse1 from "../assets/daiverselanding.png";
+import Daiverse1 from "../assets/dailand.png";
 import cocaine from "../assets/cocaine.jpeg";
 import colorado from "../assets/colorado.jpg";
 import sweetdaddy from "../assets/sweetdaddy.jpg";
