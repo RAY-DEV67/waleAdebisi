@@ -55,7 +55,7 @@ html {
 }
 
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .container {
@@ -70,7 +70,18 @@ body {
   text-align: center;
   font-family: 'Modak', cursive;
 }
-
+.bodyfont{
+  font-family: 'Delicious Handrawn', cursive;
+}
+.headingfont{
+  font-family: 'Modak', cursive;
+}
+.subheading{
+  font-family: 'Bebas Neue', cursive;
+}
+.abouttext{
+  font-family: 'Almarai', sans-serif;
+}
 .swiper_container {
   height: 5rem;
   padding: 2rem 0;
@@ -188,6 +199,7 @@ body {
 }
 .main{
   animation: zoom-in-fade 2s ease-in-out;
+  z-index: -10rem;
 }
 @keyframes zoom-in-fade {
   0% {
@@ -198,4 +210,37 @@ body {
     transform: scale(1);
     opacity: 1;
   }
+}
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+  transition: all 1s ease-in-out;
+  z-index: 2000;
+}
+.no{
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(5px);
+  transform: translateY(100%)
+}
+.nav-image{
+  z-index: -100000;
+}
+.overlay-Dark{
+  background-color: #323b0a;
+  opacity: 0.9;
+  /* z-index: 1; */
+}
+.overlay-Light{
+  background-color: #323b0a;
+  opacity: 0.9;
+  /* z-index: 1; */
+}
+.navbar{
+  /* background-color: transparent; */
+  box-shadow: 0px 0px 7px;
+}
+.nav{
+  z-index: 2000;
 }
