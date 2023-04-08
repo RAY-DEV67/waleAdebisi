@@ -1,4 +1,4 @@
-import Daiverse1 from "../assets/about1.png";
+import Daiverse1 from "../assets/about11.png";
 import Daiverse2 from "../assets/about2.png";
 import { Theme } from "../App";
 import { useContext } from "react";
