@@ -189,7 +189,7 @@ export function LandingPage() {
         </p>
       </div>
 
-      <div className="py-[2rem] flex flex-col items-center">
+      <div className="pt-[2rem] pb-[4rem] flex flex-col items-center">
         <h3 className="heading text-[#e59002]" id="Newsletter">
           Newsletter
         </h3>
