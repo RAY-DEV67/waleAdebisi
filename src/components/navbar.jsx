@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import Daiverse1 from "../assets/dailand.png";
+import Daiverse1 from "../assets/dainav.png";
 import logo from "../assets/logo.png";
 import { useState, useEffect, useContext } from "react";
 import { Theme, Settheme } from "../App";

@@ -1,4 +1,5 @@
-import Daiverse1 from "../assets/dailand.png";
+import Daiverse1 from "../assets/about1.png";
+import Daiverse2 from "../assets/about2.png";
 import { Theme } from "../App";
 import { useContext } from "react";
 
@@ -27,7 +28,7 @@ His unique, eye-catching stagename Dai Verse has quite the backstory; being a 'j
           onClick={() => {
             setcheck("new");
           }}
-          className="w-[100vw] h-[65rem] mt-[-6rem] object-cover main"
+          className="w-[100vw] h-[65rem] mt-[-4rem] object-cover main"
         />
 
 <h3 className="text-3xl font-bold mb-[1rem] mt-[3rem] text-[#e59002] subheading">MUSIC CAREER</h3>
@@ -41,12 +42,12 @@ Dai Verse -who is currently managed by LONGITUDE - has 2 collaborations so far :
 <img
           alt="Daiverse"
           src={
-            theme === "Dark" ? Daiverse1 : theme === "Light" ? Daiverse1 : ""
+            theme === "Dark" ? Daiverse2 : theme === "Light" ? Daiverse2 : ""
           }
           onClick={() => {
             setcheck("new");
           }}
-          className="w-[100vw] h-[65rem] mt-[-6rem] object-cover main"
+          className="w-[100vw] h-[65rem] mt-[-2rem] object-cover main"
         />
           </div>
           </div>
