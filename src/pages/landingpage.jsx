@@ -180,11 +180,11 @@ export function LandingPage() {
         </Swiper>
       </div>
 
-      <div className="bg-[#e59002] pb-[2rem] mt-[-5rem]">
+      <div className="bg-[#e59002] pb-[2rem] mt-[-5rem] flex flex-col items-center">
         <h3 className="heading text-[#323b0a]" id="Tour">
           Tour & Shows
         </h3>
-        <p className=" text-[#323b0a] text-3xl text-center abouttext">
+        <p className=" text-[#323b0a] text-3xl w-[80%] text-center abouttext">
           THERE IS CURRENTLY NO INCOMING TOUR / SHOW
         </p>
       </div>
