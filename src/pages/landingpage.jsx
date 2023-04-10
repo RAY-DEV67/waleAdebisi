@@ -227,7 +227,7 @@ export function LandingPage() {
           <input
             type="email"
             placeholder="Email"
-            className="border border-[#e59002] w-[50%] rounded-[10px] text-3xl py-[0.3rem] px-[1rem]"
+            className="border border-[#e59002] text-[#e59002] w-[50%] rounded-[10px] text-3xl py-[0.3rem] px-[1rem]"
             name="email"
                 onChange={(e) => {setemail(e.target.value)}}
           />
