@@ -125,10 +125,10 @@ export function LandingPage() {
             </SwiperSlide>
 
             <div className="slider-controler hidden sm:block">
-              <div className="swiper-button-prev slider-arrow">
+              <div className="swiper-button-prev bg-[#e59002] slider-arrow">
                 <ion-icon name="arrow-back-outline"></ion-icon>
               </div>
-              <div className="swiper-button-next slider-arrow">
+              <div className="swiper-button-next bg-[#e59002] slider-arrow">
                 <ion-icon name="arrow-forward-outline"></ion-icon>
               </div>
               {/* <div className="swiper-pagination"></div> */}
@@ -149,7 +149,8 @@ export function LandingPage() {
         <h3 className="heading text-[#e59002]" id="Videos">
           VIDEOS
         </h3>
-        <Swiper
+       <div className="flex flex-col items-center">
+       <Swiper
           effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
@@ -168,7 +169,7 @@ export function LandingPage() {
             clickable: true,
           }}
           modules={[EffectCoverflow, Pagination, Navigation]}
-          className="swiper_container"
+          className="swiper_container w-[90vw] sm:w-[70vw] md:w-[70vw] lg:w-[70vw]"
         >
           <SwiperSlide className="flex flex-col items-center">
             <ReactPlayer
@@ -190,14 +191,15 @@ export function LandingPage() {
           </SwiperSlide>
 
           <div className="slider-controler mt-[-12rem] ">
-            <div className="swiper-button-prev slider-arrow">
-              <ion-icon name="arrow-back-outline"></ion-icon>
+            <div className="swiper-button-prev bg-[#e59002] slider-arrow">
+              <div name="arrow-back-outline"></div>
             </div>
-            <div className="swiper-button-next slider-arrow">
-              <ion-icon name="arrow-forward-outline"></ion-icon>
+            <div className="swiper-button-next bg-[#e59002] slider-arrow">
+              <div name="arrow-forward-outline"></div>
             </div>
           </div>
         </Swiper>
+       </div>
       </div>
 </div>
 

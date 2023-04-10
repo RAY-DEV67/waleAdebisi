@@ -30,7 +30,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <div className="w-[100vw] flex flex-col lg:items-center">
+    <div className="w-[100vw] flex flex-col lg:ml-[-1rem] lg:items-center">
       <div
       className={theme === "Dark" ? `flex justify-between px-[1rem] fixed z-10 items-center ${
         scrolled ? "bg-[#323b0a] navbar mb-[2rem]" : "bg-transparent"

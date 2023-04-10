@@ -55,7 +55,7 @@ html {
 }
 
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .container {
@@ -164,7 +164,7 @@ body {
 }
 
 .slider-controler .slider-arrow {
-  background: #e59002;
+  /* background: var(--white); */
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
