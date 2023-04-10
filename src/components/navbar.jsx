@@ -30,7 +30,8 @@ export function Navbar() {
   }, []);
 
   return (
-    <div
+    <div className="w-[100vw] flex flex-col lg:items-center">
+      <div
       className={theme === "Dark" ? `flex justify-between px-[1rem] fixed z-10 items-center ${
         scrolled ? "bg-[#323b0a] navbar mb-[2rem]" : "bg-transparent"
       }` : theme === "Light" ? `flex justify-between px-[1rem] fixed z-10 items-center ${
@@ -41,6 +42,7 @@ export function Navbar() {
         onClick={() => {
           setshowMobile(true);
         }}
+        className="lg:hidden"
       >
         <svg
           width="35px"
@@ -86,6 +88,37 @@ export function Navbar() {
             </g>{" "}
           </g>
         </svg>
+      </div>
+      <div className="hidden lg:flex">
+      <Link to="/About" className="nav"  onClick={() => {
+            setshowMobile(false);
+          }}>
+        <p className="text-[2vw] font-bold">About</p>
+        </Link>
+        <a
+          className="text-[2vw] mx-[1rem] nav font-bold"
+          href="#Music"
+          onClick={() => {
+            setshowMobile(false);
+          }}
+        >
+          Music
+        </a>
+        <a
+          className="text-[2vw] nav font-bold"
+          href="#Videos"
+          onClick={() => {
+            setshowMobile(false);
+          }}
+        >
+          Videos
+        </a>
+        <a
+          className="text-[2vw] ml-[1rem] nav font-bold"
+          href="#Newsletter"
+        >
+          Newsletter
+        </a>
       </div>
       <img
         alt="Daiverse"
@@ -365,5 +398,6 @@ export function Navbar() {
         </p>
       </div>
     </div>
-  );
+
+    </div>  );
 }

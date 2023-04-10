@@ -55,7 +55,7 @@ html {
 }
 
 body {
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 .container {
@@ -83,7 +83,7 @@ body {
   font-family: 'Almarai', sans-serif;
 }
 .swiper_container {
-  height: 5rem;
+  height: 55rem;
   padding: 2rem 0;
   position: relative;
 }
@@ -93,6 +93,7 @@ body {
   height: 42rem;
   position: relative;
 }
+
 
 @media (max-width: 500px) {
   .swiper_container {
@@ -163,7 +164,7 @@ body {
 }
 
 .slider-controler .slider-arrow {
-  background: var(--white);
+  background: #e59002;
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
@@ -218,6 +219,14 @@ body {
   transition: all 1s ease-in-out;
   z-index: 2000;
 }
+.welcomeshow{
+  filter: blur(0);
+  transition: all 1s ease-in-out;
+}
+.welcome{
+  transition: all 1s;
+  filter: blur(5px);
+}
 .no{
   opacity: 0;
   transition: all 1s;
@@ -243,4 +252,21 @@ body {
 }
 .nav{
   z-index: 2000;
+}
+.loading-spinner {
+  width: 15px;
+  height: 15px;
+  margin-top: 1rem;
+  border: 5px solid #f3f3f3; /* Light grey */
+  border-top: 5px solid #383636; /* Black */
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

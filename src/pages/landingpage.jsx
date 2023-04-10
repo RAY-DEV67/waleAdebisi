@@ -1,3 +1,5 @@
+import db from "../config/firebase";
+import { addDoc, collection } from "firebase/firestore";
 import Daiverse1 from "../assets/dailand.png";
 import cocaine from "../assets/cocaine.jpeg";
 import colorado from "../assets/colorado.jpg";
@@ -15,12 +17,32 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
+import LoadingSpinner from "../components/spinner";
 
 export function LandingPage() {
   const theme = useContext(Theme);
+  const [email, setemail] = useState("");
+  const [loading, setloading] = useState(false);
+  const [welcome, setwelcome] = useState(false);
 
 
-  const [check, setcheck] = useState("check");
+  
+  const upload = async () => {
+    setloading(true)
+    await addDoc(collection(db, "Email"), {
+      Email: email,
+    });
+      setloading(false)
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+      upload();
+      setwelcome(true);
+      setTimeout(() => {
+        setwelcome(false);
+      }, 4000)
+  };
 
   return (
     <div>
@@ -30,14 +52,11 @@ export function LandingPage() {
           src={
             theme === "Dark" ? Daiverse1 : theme === "Light" ? Daiverse1 : ""
           }
-          onClick={() => {
-            setcheck("new");
-          }}
-          className="w-[100vw] h-[65rem] mt-[-6rem] object-cover main"
+          className="w-[100vw] h-[65rem] mt-[-6rem] md:mt-[2rem] lg:mt-[10rem] lg:w-[70vw] xl:w-[70vw] xl:mt-[15rem] object-cover main"
         />
       </div>
       <div className="flex flex-col items-center" id="Music">
-        <div className="container">
+        <div className="container sm:w-[70%]">
           <h1 className="heading text-[#e59002]">Music</h1>
           <Swiper
             effect={"coverflow"}
@@ -58,9 +77,9 @@ export function LandingPage() {
               clickable: true,
             }}
             modules={[EffectCoverflow, Pagination, Navigation]}
-            className="swiper_container mb-[-10rem]"
+            className="swiper_container mb-[-10rem] sm:mb-[0rem]"
           >
-            <SwiperSlide className="musics">
+            <SwiperSlide className="musics flex flex-col items-center">
               <img alt="Daiverse" src={sweetdaddyremix} className="" />
               <p className="text-center text-3xl text-[#e59002] font-bold mb-[1rem] mt-[-2rem]">
                 Sweet Daddy Remix
@@ -71,7 +90,7 @@ export function LandingPage() {
                 </button>
               </div>
             </SwiperSlide>
-            <SwiperSlide className="musics">
+            <SwiperSlide className="musics flex flex-col items-center">
               <img alt="Daiverse" src={sweetdaddy} className="" />
               <p className="text-center text-3xl text-[#e59002] font-bold mb-[1rem] mt-[-2rem]">
                 Sweet Daddy
@@ -82,7 +101,7 @@ export function LandingPage() {
                 </button>
               </div>
             </SwiperSlide>
-            <SwiperSlide className="musics">
+            <SwiperSlide className="musics flex flex-col items-center">
               <img alt="Daiverse" src={cocaine} className="" />
               <p className="text-center text-3xl text-[#e59002] font-bold mb-[1rem] mt-[-2rem]">
                 Cocaine
@@ -93,7 +112,7 @@ export function LandingPage() {
                 </button>
               </div>
             </SwiperSlide>
-            <SwiperSlide className="musics">
+            <SwiperSlide className="musics flex flex-col items-center">
               <img alt="Daiverse" src={colorado} className="" />
               <p className="text-center text-3xl text-[#e59002] font-bold mb-[1rem] mt-[-2rem]">
                 Colorado
@@ -105,7 +124,7 @@ export function LandingPage() {
               </div>
             </SwiperSlide>
 
-            <div className="slider-controler hidden mt-[-6rem]">
+            <div className="slider-controler hidden sm:block">
               <div className="swiper-button-prev slider-arrow">
                 <ion-icon name="arrow-back-outline"></ion-icon>
               </div>
@@ -125,8 +144,9 @@ export function LandingPage() {
   ]}/> */}
       </div>
 
-      <div>
-        <h3 className="heading text-[#e59002] mt-[-rem] " id="Videos">
+<div className="flex flex-col items-center">
+<div className="sm:w-[70%]">
+        <h3 className="heading text-[#e59002]" id="Videos">
           VIDEOS
         </h3>
         <Swiper
@@ -179,8 +199,10 @@ export function LandingPage() {
           </div>
         </Swiper>
       </div>
+</div>
 
-      <div className="bg-[#e59002] pb-[2rem] mt-[-5rem] flex flex-col items-center">
+      <div className="flex flex-col items-center">
+      <div className="bg-[#e59002] w-[100vw] pb-[2rem] mt-[-5rem] flex flex-col items-center">
         <h3 className="heading text-[#323b0a]" id="Tour">
           Tour & Shows
         </h3>
@@ -188,12 +210,14 @@ export function LandingPage() {
           THERE IS CURRENTLY NO INCOMING TOUR / SHOW
         </p>
       </div>
+      </div>
 
-      <div className="pt-[2rem] pb-[4rem] flex flex-col items-center">
+      <div className="flex flex-col items-center">
+      <div className="pt-[2rem] pb-[4rem] sm:w-[70%] flex flex-col items-center">
         <h3 className="heading text-[#e59002]" id="Newsletter">
           Newsletter
         </h3>
-        <p className=" text-[#323b0a] text-3xl text-white text-center w-[80%]">
+        <p className=" text-[#e59002] text-3xl text-center w-[80%]">
           So glad you are here. I usually share things with you first before
           anyone else. Join below so you dont miss out.
         </p>
@@ -202,16 +226,17 @@ export function LandingPage() {
             type="email"
             placeholder="Email"
             className="border border-[#e59002] w-[50%] rounded-[10px] text-3xl py-[0.3rem] px-[1rem]"
+            name="email"
+                onChange={(e) => {setemail(e.target.value)}}
           />
-          <input
-            type="submit"
-            value="Join"
-            className="border bg-[#e59002] text-white rounded-[10px] text-3xl py-[0.3rem] px-[1rem]"
-          />
+          <button className="border bg-[#e59002] text-white rounded-[10px] text-3xl py-[0.3rem] px-[1rem]"
+          onClick={handleSubmit}>{loading ? <LoadingSpinner/> : "join"}</button>
         </form>
+        <p> {welcome ? <p className="border mt-[1rem] bg-[#e59002] text-white rounded-[10px] text-2xl opacity-100 welcomeshow py-[0.3rem] px-[1rem]">WELCOME TO THE CLAN 🤩</p> : <p className="border bg-[#e59002] welcome text-white rounded-[10px] text-xs opacity-0">WELCOME TO THE CLAN 🤩</p>}</p>
+      </div>
       </div>
 
-      <div className="bg-[#e59002] py-[2rem]">
+          <div className="bg-[#e59002] py-[2rem]">
         <div className="flex justify-center">
         <a href="https://www.instagram.com/dai_verse/" target="_Blank">
 <svg width="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>instagram [#167]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-340.000000, -7439.000000)" fill="#000000"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792" id="instagram-[#167]"> </path> </g> </g> </g> </g></svg>
@@ -234,7 +259,7 @@ export function LandingPage() {
         <a href="https://open.spotify.com/artist/2G0yYOdnPrffB2Mre1XCMv?si=5IHC_Q31S7yhKAGBYO2Q_A" target="_Blank">
         <svg width="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>spotify [#162]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7479.000000)" fill="#000000"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M99.915,7327.865 C96.692,7325.951 91.375,7325.775 88.297,7326.709 C87.803,7326.858 87.281,7326.58 87.131,7326.085 C86.981,7325.591 87.26,7325.069 87.754,7324.919 C91.287,7323.846 97.159,7324.053 100.87,7326.256 C101.314,7326.52 101.46,7327.094 101.196,7327.538 C100.934,7327.982 100.358,7328.129 99.915,7327.865 L99.915,7327.865 Z M99.81,7330.7 C99.584,7331.067 99.104,7331.182 98.737,7330.957 C96.05,7329.305 91.952,7328.827 88.773,7329.792 C88.36,7329.916 87.925,7329.684 87.8,7329.272 C87.676,7328.86 87.908,7328.425 88.32,7328.3 C91.951,7327.198 96.466,7327.732 99.553,7329.629 C99.92,7329.854 100.035,7330.334 99.81,7330.7 L99.81,7330.7 Z M98.586,7333.423 C98.406,7333.717 98.023,7333.81 97.729,7333.63 C95.381,7332.195 92.425,7331.871 88.944,7332.666 C88.609,7332.743 88.274,7332.533 88.198,7332.197 C88.121,7331.862 88.33,7331.528 88.667,7331.451 C92.476,7330.58 95.743,7330.955 98.379,7332.566 C98.673,7332.746 98.766,7333.129 98.586,7333.423 L98.586,7333.423 Z M94,7319 C88.477,7319 84,7323.477 84,7329 C84,7334.523 88.477,7339 94,7339 C99.523,7339 104,7334.523 104,7329 C104,7323.478 99.523,7319.001 94,7319.001 L94,7319 Z" id="spotify-[#162]"> </path> </g> </g> </g> </g></svg>
         </a>
-        <a target="_Blank" className="ml-[0.5rem]">
+        <a target="_Blank" href="https://audiomack.com/dai_verse" className="ml-[0.5rem]">
         <svg width="20px" fill="#000000" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M.331 11.378s.542-.089.765.144c.223.233.077.716-.22.724-.296.01-.57.063-.764-.144a.444.444 0 0 1 .219-.724m5.881 3.292c-.052.01-.107-.017-.164-.058-.388-.542-.529-2.393-.707-2.503-.185-.114-.854 1.026-2.186.903-.557-.051-1.124-.412-1.457-.662.03-.42.036-1.403.865-1.083.504.194 1.367.726 2.125-.23.838-1.058 1.3-.75 1.577-.52.277.23.092 1.425.506 1.09.413-.334 2.082-2.41 2.082-2.41s1.292-1.303 1.49.067c.197 1.37 1.04 2.888 1.263 2.845.223-.043 2.822-5.325 3.195-5.666.372-.341 1.625-.296 1.565.578-.06.874-.187 6.308-.187 6.308s-.147 1.531.093.713c.099-.34.206-.645.339-1.003a989.222 989.222 0 0 0 2.278-7.368l.317-1.09a3.592 3.592 0 0 1 .097-.33c.046-.154.076-.255.086-.282.024-.068.092-.12.188-.157.097-.061.2-.064.317-.067.302-.027.69.012 1.04.112.102 0 .212.037.317.112s.006 0 .015.01c.003 0 .005 0 .008.01a.503.503 0 0 1 .098.095c.001 0 .002 0 .004.01a.716.716 0 0 1 .051.073c.196.286.315.814.195 1.75-.3 2.335-.531 7.14-.531 7.14s-.047.229.435-.783c.017-.035.038-.066.058-.098a.42.42 0 0 0 .091-.085c.298-.354 1.097-.563 1.651-.558.234.028.43.087.547.16.218.333.09 1.562.09 1.562-.462.043-1.341.291-1.653.337-.311.046-.785 2.07-1.443 1.863-.658-.207-2.125-1.127-2.125-1.253a98.33 98.33 0 0 1 .152-1.87.152.152 0 0 1 0-.014c.022-.273.003-.392-.123-.12-.109.235-.581 1.736-1.108 3.371-.056.143-1.051 3.156-1.182 3.523-.156.427-.287.753-.377.921-.138.187-.324.304-.583.226-.646-.196-1.465-1.09-1.473-1.31-.015-1.251.06-7.974-.242-7.414-.311.575-2.73 4.561-2.73 4.561-.04.01-.07.01-.106.01-.172-.019-.437-.074-.51-.238-.004-.01-.01-.018-.013-.028l-.014-.04c-.033-.11-.046-.23-.075-.327a40.828 40.828 0 0 0-.463-1.42c-.279-.909-.566-1.837-.613-1.94-.092-.2-.227-.116-.347 0-.54.458-1.687 2.48-2.723 2.59"></path></g></svg>
         </a>
         </div>
