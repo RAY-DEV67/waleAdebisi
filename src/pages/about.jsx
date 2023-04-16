@@ -1,5 +1,7 @@
 import Daiverse1 from "../assets/about11.png";
 import Daiverse2 from "../assets/about2.png";
+import Daiverse3 from "../assets/aboutb.png";
+import Daiverse4 from "../assets/about2b.png";
 import { Theme } from "../App";
 import { useContext } from "react";
 
@@ -47,7 +49,7 @@ export function About() {
           <img
             alt="Daiverse"
             src={
-              theme === "Dark" ? Daiverse1 : theme === "Light" ? Daiverse1 : ""
+              theme === "Dark" ? Daiverse1 : theme === "Light" ? Daiverse3 : ""
             }
             className="w-[100vw] h-[65rem] mt-[-2rem] sm:w-[50vw] lg:h-[45rem] lg:w-[30vw] object-cover main"
           />
@@ -73,7 +75,7 @@ export function About() {
           <img
             alt="Daiverse"
             src={
-              theme === "Dark" ? Daiverse2 : theme === "Light" ? Daiverse2 : ""
+              theme === "Dark" ? Daiverse2 : theme === "Light" ? Daiverse4 : ""
             }
             onClick={() => {
               setcheck("new");

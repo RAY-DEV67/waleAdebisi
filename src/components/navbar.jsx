@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Daiverse1 from "../assets/dainav.png";
+import Daiverse2 from "../assets/dainavb.png";
 import logo from "../assets/logo.png";
 import { useState, useEffect, useContext } from "react";
 import { Theme, Settheme } from "../App";
@@ -353,7 +354,7 @@ export function Navbar() {
             : "bg-[#323b0a] h-[100vh] no top-0 w-[100vw] flex flex-col items-center justify-center fixed"
         }
       >
-        <img src={Daiverse1} alt="Daiverse" className="absolute nav-image"/>
+        <img src={theme === "Dark" ? Daiverse1 : theme === "Light" ? Daiverse2 : ""} alt="Daiverse" className="absolute nav-image"/>
         <div className={
           showMobile
             ? `${theme === "Dark" ? "overlay-Dark" : theme === "Light" ? "overlay-Light" : ""} h-[100vh] top-0 w-[100vw] flex flex-col items-center justify-center ml-[-1rem] fixed show`
@@ -390,12 +391,15 @@ export function Navbar() {
         >
           Videos
         </a>
-        <p
+        <a
           className="text-[6vw] mt-[2rem] nav text-[#e59002] font-bold"
           href="#Newsletter"
+          onClick={() => {
+            setshowMobile(false);
+          }}
         >
           Newsletter
-        </p>
+        </a>
       </div>
     </div>
 

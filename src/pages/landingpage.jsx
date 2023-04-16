@@ -1,6 +1,7 @@
 import db from "../config/firebase";
 import { addDoc, collection } from "firebase/firestore";
 import Daiverse1 from "../assets/dailand.png";
+import Daiverse2 from "../assets/dailandb.png";
 import cocaine from "../assets/cocaine.jpeg";
 import colorado from "../assets/colorado.jpg";
 import sweetdaddy from "../assets/sweetdaddy.jpg";
@@ -47,13 +48,15 @@ export function LandingPage() {
   return (
     <div>
       <div className="flex flex-col items-center">
-        <img
+        {theme === "Dark" ? <img
           alt="Daiverse"
-          src={
-            theme === "Dark" ? Daiverse1 : theme === "Light" ? Daiverse1 : ""
-          }
+          src={Daiverse1}
           className="w-[100vw] h-[65rem] mt-[-6rem] md:mt-[2rem] lg:mt-[10rem] lg:w-[70vw] xl:w-[70vw] xl:mt-[15rem] object-cover main"
-        />
+        /> : theme === "Light" ? <img
+        alt="Daiverse"
+        src={Daiverse2}
+        className="w-[90vw] h-[55rem] mt-[4rem] md:mt-[10rem] lg:mt-[12rem] lg:w-[60vw] xl:w-[60vw] xl:mt-[15rem] object-cover main"
+      /> : ""}
       </div>
       <div className="flex flex-col items-center" id="Music">
         <div className="container sm:w-[70%]">
@@ -85,9 +88,9 @@ export function LandingPage() {
                 Sweet Daddy Remix
               </p>
               <div className="flex flex-col items-center">
-                <button className="border border-[#e59002] text-2xl px-[2.5rem] mt-[1rem] py-[0.3rem]">
+                <a target="_Blank" href="https://music.apple.com/ng/album/sweet-daddy/1606795060?i=1606795063" className="border border-[#e59002] text-2xl px-[2.5rem] mt-[1rem] py-[0.3rem]">
                   Stream
-                </button>
+                </a>
               </div>
             </SwiperSlide>
             <SwiperSlide className="musics flex flex-col items-center">
@@ -96,9 +99,9 @@ export function LandingPage() {
                 Sweet Daddy
               </p>
               <div className="flex flex-col items-center">
-                <button className="border border-[#e59002] text-2xl px-[2.5rem] mt-[1rem] py-[0.3rem]">
+                <a target="_Blank" href="https://music.apple.com/ng/album/sweet-daddy/1566916388?i=1566916393" className="border border-[#e59002] text-2xl px-[2.5rem] mt-[1rem] py-[0.3rem]">
                   Stream
-                </button>
+                </a>
               </div>
             </SwiperSlide>
             <SwiperSlide className="musics flex flex-col items-center">
@@ -107,9 +110,9 @@ export function LandingPage() {
                 Cocaine
               </p>
               <div className="flex flex-col items-center">
-                <button className="border border-[#e59002] text-2xl px-[2.5rem] mt-[1rem] py-[0.3rem]">
+                <a target="_Blank" href="https://music.apple.com/ng/album/your-body-cocaine/1586843705?i=1586843917" className="border border-[#e59002] text-2xl px-[2.5rem] mt-[1rem] py-[0.3rem]">
                   Stream
-                </button>
+                </a>
               </div>
             </SwiperSlide>
             <SwiperSlide className="musics flex flex-col items-center">
@@ -118,9 +121,9 @@ export function LandingPage() {
                 Colorado
               </p>
               <div className="flex flex-col items-center">
-                <button className="border border-[#e59002] text-2xl px-[2.5rem] mt-[1rem] py-[0.3rem]">
+                <a target="_Blank" href="https://music.apple.com/ng/album/colorado-feat-dai-verse/1649399753?i=1649399754" className="border border-[#e59002] text-2xl px-[2.5rem] mt-[1rem] py-[0.3rem]">
                   Stream
-                </button>
+                </a>
               </div>
             </SwiperSlide>
 
