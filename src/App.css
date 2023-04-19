@@ -196,7 +196,7 @@ body {
   background: var(--primary);
 }
 .musics{
-  box-shadow: 0px 0px 20px black
+  box-shadow: 0px 0px 5px #D3D3D3
 }
 .main{
   animation: zoom-in-fade 2s ease-in-out;
@@ -237,7 +237,7 @@ body {
   z-index: -100000;
 }
 .overlay-Dark{
-  background-color: #323b0a;
+  background-color: #000009;
   opacity: 0.9;
   /* z-index: 1; */
 }

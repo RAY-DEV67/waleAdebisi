@@ -87,7 +87,7 @@ export function About() {
         </div>
       </div>
       
-      <div className="bg-[#e59002] py-[2rem]">
+      <div className="bg-[#D3D3D3] rounded-t-[20px] py-[2rem]">
         <div className="flex justify-center">
           <a href="https://www.instagram.com/dai_verse/" target="_Blank">
             <svg
@@ -355,10 +355,10 @@ export function About() {
           </a>
         </div>
         <div className="mx-[1rem]">
-          <h3 className="text-3xl mb-[1rem] mt-[3rem] subheading">
+          <h3 className="text-3xl mb-[1rem] mt-[3rem] text-[#000009] subheading">
             For Bookings & Enquires
           </h3>
-          <p className="text-xl subheading">
+          <p className="text-xl text-[#000009] subheading">
             EMAIL: DAIVERSE@LONGITUDEPROMOTIONS.COM
           </p>
         </div>

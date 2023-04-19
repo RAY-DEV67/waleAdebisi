@@ -15,7 +15,7 @@ function App() {
   const [theme, settheme] = useState("Dark");
 
   return (
-    <div className={theme === "Dark" ? "App bg-[#323b0a] text-white bodyfont" : theme === "Light" ? "App bg-white text-[#323b0a] bodyfont" : ""}>
+    <div className={theme === "Dark" ? "App bg-[#000009] text-white bodyfont" : theme === "Light" ? "App bg-white text-[#323b0a] bodyfont" : ""}>
       <Theme.Provider value={theme}>
         <Settheme.Provider value={settheme}>
     <Router>
