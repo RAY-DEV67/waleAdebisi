@@ -1,6 +1,6 @@
 import db from "../config/firebase";
 import { addDoc, collection } from "firebase/firestore";
-import Daiverse1 from "../assets/dailand.png";
+import Daiverse1 from "../assets/final2.png";
 import Daiverse2 from "../assets/dailandb.png";
 import cocaine from "../assets/cocaine.jpeg";
 import colorado from "../assets/colorado.jpg";
@@ -50,13 +50,13 @@ export function LandingPage() {
           <img
             alt="Daiverse"
             src={Daiverse1}
-            className="w-[100vw] h-[65rem] mt-[-6rem] md:mt-[2rem] lg:mt-[10rem] lg:w-[70vw] xl:w-[70vw] xl:mt-[15rem] object-cover main"
+            className="w-[100vw] h-[65rem] mt-[-6rem] md:mt-[2rem] lg:mt-[10rem] lg:w-[70vw] xl:w-[60vw] xl:mt-[15rem] object-cover main"
           />
         ) : theme === "Light" ? (
           <img
             alt="Daiverse"
             src={Daiverse2}
-            className="w-[90vw] h-[55rem] mt-[4rem] md:mt-[10rem] lg:mt-[12rem] lg:w-[60vw] xl:w-[60vw] xl:mt-[15rem] object-cover main"
+            className="w-[90vw] h-[55rem] mt-[4rem] md:mt-[15rem] lg:mt-[18rem] lg:w-[50vw] xl:w-[50vw] xl:mt-[15rem] object-cover main"
           />
         ) : (
           ""
