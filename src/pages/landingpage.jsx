@@ -9,7 +9,6 @@ import sweetdaddyremix from "../assets/sweetdaddyremix.jpeg";
 import ReactPlayer from "react-player";
 import { useState, useContext } from "react";
 import { Theme } from "../App";
-// Import Swiper React components now
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
