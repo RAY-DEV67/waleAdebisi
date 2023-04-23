@@ -2,7 +2,7 @@
 // IMPORT FIRESTRORE //////////////////////////////////
 import db from "../config/firebase";
 import { addDoc, collection } from "firebase/firestore";
-import Daiverse1 from "../assets/sunday4.jpg";
+import Daiverse1 from "../assets/sunday4.webp";
 import Daiverse2 from "../assets/dailandb.png";
 import cocaine from "../assets/cocaine.jpeg";
 import colorado from "../assets/colorado.jpg";

@@ -1,5 +1,5 @@
-import Daiverse1 from "../assets/sunday1.jpg";
-import Daiverse2 from "../assets/sunday3.jpg";
+import Daiverse1 from "../assets/sunday1.webp";
+import Daiverse2 from "../assets/sunday3.webp";
 import Daiverse3 from "../assets/aboutb.png";
 import Daiverse4 from "../assets/about2b.png";
 import { Theme } from "../App";
