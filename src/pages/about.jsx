@@ -1,5 +1,5 @@
-import Daiverse1 from "../assets/about11.png";
-import Daiverse2 from "../assets/about2.png";
+import Daiverse1 from "../assets/sunday1.jpg";
+import Daiverse2 from "../assets/sunday3.jpg";
 import Daiverse3 from "../assets/aboutb.png";
 import Daiverse4 from "../assets/about2b.png";
 import { Theme } from "../App";
@@ -51,7 +51,7 @@ export function About() {
             src={
               theme === "Dark" ? Daiverse1 : theme === "Light" ? Daiverse3 : ""
             }
-            className="w-[100vw] h-[65rem] mt-[-2rem] sm:w-[50vw] lg:h-[45rem] lg:w-[30vw] object-cover main"
+            className="w-[100vw] h-[65rem] mt-[1rem] sm:w-[50vw] lg:h-[45rem] lg:w-[30vw] object-cover"
           />
          </div>
 </div>
@@ -80,7 +80,7 @@ export function About() {
             onClick={() => {
               setcheck("new");
             }}
-            className="w-[100vw] h-[65rem] mt-[-2rem] sm:w-[50vw] lg:h-[45rem] lg:w-[30vw] object-cover main"
+            className="w-[100vw] h-[65rem] mt-[1rem] sm:w-[50vw] lg:h-[45rem] lg:w-[30vw] object-cover main"
           />
 </div>
 </div>
