@@ -1,3 +1,5 @@
+
+// IMPORT FIRESTRORE //////////////////////////////////
 import db from "../config/firebase";
 import { addDoc, collection } from "firebase/firestore";
 import Daiverse1 from "../assets/sunday4.jpg";
