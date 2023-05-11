@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import Daiverse1 from "../assets/dainav.png";
-import Daiverse2 from "../assets/dainavb.png";
+import Liya from "../assets/liyanav.jpg";
 import logo from "../assets/logo.png";
 import { useState, useEffect, useContext } from "react";
 import { Theme, Settheme } from "../App";
@@ -34,7 +33,7 @@ export function Navbar() {
     <div className="w-[100vw] flex flex-col lg:items-center">
       <div
       className={theme === "Dark" ? `flex justify-between w-[100vw] px-[1rem] fixed z-10 items-center ${
-        scrolled ? "bg-[#000009] navbar mb-[2rem]" : "bg-transparent"
+        scrolled ? "bg-[#bf94d1] navbar mb-[2rem]" : "bg-transparent"
       }` : theme === "Light" ? `flex justify-between px-[1rem] fixed z-10 items-center ${
         scrolled ? "bg-[#e59002] navbar mb-[2rem]" : "bg-[#e59002]"
       }` : ""}
@@ -94,10 +93,10 @@ export function Navbar() {
       <Link to="/About" className="nav"  onClick={() => {
             setshowMobile(false);
           }}>
-        <p className="text-[2vw] font-bold">About</p>
+        <p className="text-[2vw] headingfont font-bold">About</p>
         </Link>
         <a
-          className="text-[2vw] mx-[1rem] nav font-bold"
+          className="text-[2vw] headingfont mx-[1rem] nav font-bold"
           href="#Music"
           onClick={() => {
             setshowMobile(false);
@@ -106,7 +105,7 @@ export function Navbar() {
           Music
         </a>
         <a
-          className="text-[2vw] nav font-bold"
+          className="text-[2vw] headingfont nav font-bold"
           href="#Videos"
           onClick={() => {
             setshowMobile(false);
@@ -115,18 +114,15 @@ export function Navbar() {
           Videos
         </a>
         <a
-          className="text-[2vw] ml-[1rem] nav font-bold"
+          className="text-[2vw] headingfont ml-[1rem] nav font-bold"
           href="#Newsletter"
         >
           Newsletter
         </a>
       </div>
-      <img
-        alt="Daiverse"
-        src={logo}
-        className="w-[35%] mt-[0.5rem] mb-[1rem] mr-[-2.8rem] lg:mr-[-4.5rem] lg:w-[20%]"
-        onClick={() => {navigate("/")}}
-      />
+      <p className="text-6xl liyafont mt-[0.5rem] mr-[2rem] lg:mr-[-4.5rem] lg:w-[20%]"
+        onClick={() => {navigate("/")}}>LIYA</p>
+      
       
 
       <div
@@ -136,7 +132,7 @@ export function Navbar() {
             : "bg-[#000009] h-[100vh] no top-0 w-[100vw] flex flex-col items-center justify-center fixed"
         }
       >
-        <img src={theme === "Dark" ? Daiverse1 : theme === "Light" ? Daiverse2 : ""} alt="Daiverse" className="absolute nav-image"/>
+        <img src={Liya} alt="Daiverse" className="absolute nav-image"/>
         <div className={
           showMobile
             ? `${theme === "Dark" ? "overlay-Dark" : theme === "Light" ? "overlay-Light" : ""} h-[100vh] top-0 w-[100vw] flex flex-col items-center justify-center ml-[-1rem] fixed show`
@@ -153,10 +149,10 @@ export function Navbar() {
         <Link to="/About" className="nav"  onClick={() => {
             setshowMobile(false);
           }}>
-        <p className="text-[6vw] text-[#D3D3D3] font-bold">About</p>
+        <p className="text-[6vw] text-[#D3D3D3] headingfont font-bold">About</p>
         </Link>
         <a
-          className="text-[6vw] my-[2rem] nav text-[#D3D3D3] font-bold"
+          className="text-[6vw] my-[2rem] nav headingfont text-[#D3D3D3] font-bold"
           href="#Music"
           onClick={() => {
             setshowMobile(false);
@@ -165,7 +161,7 @@ export function Navbar() {
           Music
         </a>
         <a
-          className="text-[6vw] nav text-[#D3D3D3] font-bold"
+          className="text-[6vw] nav headingfont text-[#D3D3D3] font-bold"
           href="#Videos"
           onClick={() => {
             setshowMobile(false);
@@ -174,7 +170,7 @@ export function Navbar() {
           Videos
         </a>
         <a
-          className="text-[6vw] mt-[2rem] nav text-[#D3D3D3] font-bold"
+          className="text-[6vw] mt-[2rem] nav headingfont text-[#D3D3D3] font-bold"
           href="#Newsletter"
           onClick={() => {
             setshowMobile(false);

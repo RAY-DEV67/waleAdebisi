@@ -1,13 +1,10 @@
-
 // IMPORT FIRESTRORE //////////////////////////////////
 import db from "../config/firebase";
 import { addDoc, collection } from "firebase/firestore";
-import Daiverse1 from "../assets/sunday4.webp";
-import Daiverse2 from "../assets/dailandb.png";
-import cocaine from "../assets/cocaine.jpeg";
-import colorado from "../assets/colorado.jpg";
-import sweetdaddy from "../assets/sweetdaddy.jpg";
-import sweetdaddyremix from "../assets/sweetdaddyremix.jpeg";
+import melo from "../assets/melo.jpg";
+import going from "../assets/going.webp";
+import adua from "../assets/adua.jpg";
+import alari from "../assets/alari.webp";
 import ReactPlayer from "react-player";
 import { useState, useContext } from "react";
 import { Theme } from "../App";
@@ -45,27 +42,11 @@ export function LandingPage() {
   };
 
   return (
-    <div>
-      <div className="flex flex-col items-center">
-        {theme === "Dark" ? (
-          <img
-            alt="Daiverse"
-            src={Daiverse1}
-            className="w-[100vw] h-[65rem] mt-[-6rem] md:mt-[2rem] lg:mt-[10rem] lg:w-[70vw] xl:w-[60vw] xl:mt-[15rem] object-cover"
-          />
-        ) : theme === "Light" ? (
-          <img
-            alt="Daiverse"
-            src={Daiverse2}
-            className="w-[90vw] h-[55rem] mt-[4rem] md:mt-[15rem] lg:mt-[18rem] lg:w-[50vw] xl:w-[50vw] xl:mt-[15rem] object-cover main"
-          />
-        ) : (
-          ""
-        )}
-      </div>
+    <div className="bg-[#bf94d1]">
+      <div className="landing h-[100vh]"></div>
       <div className="flex flex-col items-center" id="Music">
         <div className="container sm:w-[70%]">
-          <h1 className="heading text-[#D3D3D3]">Music</h1>
+          <h1 className="heading text-[#ffffff]">Music</h1>
           <Swiper
             effect={"coverflow"}
             grabCursor={true}
@@ -88,130 +69,130 @@ export function LandingPage() {
             className="swiper_container mb-[-10rem] sm:mb-[0rem]"
           >
             <SwiperSlide className="musics flex flex-col items-center">
-              <img alt="Daiverse" src={sweetdaddyremix} className="" />
-              <p className="text-center text-3xl text-[#D3D3D3] font-bold mb-[1rem] mt-[-2rem]">
-                Sweet Daddy Remix
+              <img alt="Daiverse" src={alari} className="" />
+              <p className="text-center text-3xl text-[#ffffff] font-bold mb-[1rem] mt-[-2rem]">
+                Alari EP
               </p>
               <div className="flex flex-col items-center">
                 <a
                   target="_Blank"
                   href="https://music.apple.com/ng/album/sweet-daddy/1606795060?i=1606795063"
-                  className="border border-[#D3D3D3] text-2xl px-[2.5rem] mt-[1rem] py-[0.3rem]"
+                  className="border uppercase border-[#D3D3D3] text-[#ffffff] font-semibold bg-[#a9de9c] text-2xl px-[2.5rem] mt-[1rem] py-[0.3rem]"
                 >
                   Stream
                 </a>
               </div>
             </SwiperSlide>
             <SwiperSlide className="musics flex flex-col items-center">
-              <img alt="Daiverse" src={sweetdaddy} className="" />
-              <p className="text-center text-3xl text-[#D3D3D3] font-bold mb-[1rem] mt-[-2rem]">
-                Sweet Daddy
+              <img alt="Daiverse" src={adua} className="" />
+              <p className="text-center text-3xl text-[#ffffff] font-bold mb-[1rem] mt-[-2rem]">
+                Adua Remix
               </p>
               <div className="flex flex-col items-center">
                 <a
                   target="_Blank"
                   href="https://music.apple.com/ng/album/sweet-daddy/1566916388?i=1566916393"
-                  className="border border-[#D3D3D3] text-2xl px-[2.5rem] mt-[1rem] py-[0.3rem]"
+                  className="border text-[#ffffff] font-semibold bg-[#a9de9c] border-[#D3D3D3] text-2xl px-[2.5rem] mt-[1rem] py-[0.3rem]"
                 >
                   Stream
                 </a>
               </div>
             </SwiperSlide>
             <SwiperSlide className="musics flex flex-col items-center">
-              <img alt="Daiverse" src={cocaine} className="" />
-              <p className="text-center text-3xl text-[#D3D3D3] font-bold mb-[1rem] mt-[-2rem]">
-                Cocaine
+              <img alt="Daiverse" src={going} className="" />
+              <p className="text-center text-3xl text-[#ffffff] font-bold mb-[1rem] mt-[-2rem]">
+                Izz Going (Skalala)
               </p>
               <div className="flex flex-col items-center">
                 <a
                   target="_Blank"
                   href="https://music.apple.com/ng/album/your-body-cocaine/1586843705?i=1586843917"
-                  className="border border-[#D3D3D3] text-2xl px-[2.5rem] mt-[1rem] py-[0.3rem]"
+                  className="border border-[#D3D3D3] text-[#ffffff] font-semibold bg-[#a9de9c] text-2xl px-[2.5rem] mt-[1rem] py-[0.3rem]"
                 >
                   Stream
                 </a>
               </div>
             </SwiperSlide>
             <SwiperSlide className="musics flex flex-col items-center">
-              <img alt="Daiverse" src={colorado} className="" />
-              <p className="text-center text-3xl text-[#D3D3D3] font-bold mb-[1rem] mt-[-2rem]">
-                Colorado
+              <img alt="Daiverse" src={melo} className="" />
+              <p className="text-center text-3xl text-[#ffffff] font-bold mb-[1rem] mt-[-2rem]">
+                Melo
               </p>
               <div className="flex flex-col items-center">
                 <a
                   target="_Blank"
                   href="https://music.apple.com/ng/album/colorado-feat-dai-verse/1649399753?i=1649399754"
-                  className="border border-[#D3D3D3] text-2xl px-[2.5rem] mt-[1rem] py-[0.3rem]"
+                  className="border border-[#D3D3D3] text-[#ffffff] font-semibold bg-[#a9de9c] text-2xl px-[2.5rem] mt-[1rem] py-[0.3rem]"
                 >
                   Stream
                 </a>
               </div>
             </SwiperSlide>
 
-            <div className="slider-controler hidden sm:block">
+            <div className="slider-controler mt-[-4rem] sm:block">
               <div className="swiper-button-prev bg-[#D3D3D3] slider-arrow">
-              <svg
-                    viewBox="-3 0 32 32"
-                    version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    fill="#000009"
-                  >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
+                <svg
+                  viewBox="-3 0 32 32"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  fill="#000009"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    {" "}
+                    <g id="icomoon-ignore"> </g>{" "}
+                    <path
+                      d="M13.114 2.887c-7.243 0-13.114 5.871-13.114 13.113s5.871 13.113 13.114 13.113c7.242 0 13.112-5.871 13.112-13.113s-5.87-13.113-13.112-13.113zM13.114 28.064c-6.653 0-12.065-5.412-12.065-12.064s5.412-12.063 12.065-12.063c6.652 0 12.063 5.412 12.063 12.063s-5.411 12.064-12.063 12.064z"
+                      fill="#000009"
+                    >
                       {" "}
-                      <g id="icomoon-ignore"> </g>{" "}
-                      <path
-                        d="M13.114 2.887c-7.243 0-13.114 5.871-13.114 13.113s5.871 13.113 13.114 13.113c7.242 0 13.112-5.871 13.112-13.113s-5.87-13.113-13.112-13.113zM13.114 28.064c-6.653 0-12.065-5.412-12.065-12.064s5.412-12.063 12.065-12.063c6.652 0 12.063 5.412 12.063 12.063s-5.411 12.064-12.063 12.064z"
-                        fill="#000009"
-                      >
-                        {" "}
-                      </path>{" "}
-                      <path
-                        d="M12.318 10.363l-0.742-0.742-6.379 6.379 6.379 6.379 0.742-0.742-5.113-5.113h12.726v-1.049h-12.726z"
-                        fill="#000009"
-                      >
-                        {" "}
-                      </path>{" "}
-                    </g>
-                  </svg>
+                    </path>{" "}
+                    <path
+                      d="M12.318 10.363l-0.742-0.742-6.379 6.379 6.379 6.379 0.742-0.742-5.113-5.113h12.726v-1.049h-12.726z"
+                      fill="#000009"
+                    >
+                      {" "}
+                    </path>{" "}
+                  </g>
+                </svg>
               </div>
               <div className="swiper-button-next bg-[#D3D3D3] slider-arrow">
-              <svg
-                    viewBox="-3 0 32 32"
-                    version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    fill="#000009"
-                  >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
+                <svg
+                  viewBox="-3 0 32 32"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  fill="#000009"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    {" "}
+                    <g id="icomoon-ignore"> </g>{" "}
+                    <path
+                      d="M13.11 29.113c7.243 0 13.113-5.871 13.113-13.113s-5.87-13.113-13.113-13.113c-7.242 0-13.113 5.871-13.113 13.113s5.871 13.113 13.113 13.113zM13.11 3.936c6.652 0 12.064 5.412 12.064 12.064s-5.412 12.064-12.064 12.064c-6.653 0-12.064-5.412-12.064-12.064s5.411-12.064 12.064-12.064z"
+                      fill="#000009"
+                    >
                       {" "}
-                      <g id="icomoon-ignore"> </g>{" "}
-                      <path
-                        d="M13.11 29.113c7.243 0 13.113-5.871 13.113-13.113s-5.87-13.113-13.113-13.113c-7.242 0-13.113 5.871-13.113 13.113s5.871 13.113 13.113 13.113zM13.11 3.936c6.652 0 12.064 5.412 12.064 12.064s-5.412 12.064-12.064 12.064c-6.653 0-12.064-5.412-12.064-12.064s5.411-12.064 12.064-12.064z"
-                        fill="#000009"
-                      >
-                        {" "}
-                      </path>{" "}
-                      <path
-                        d="M13.906 21.637l0.742 0.742 6.378-6.379-6.378-6.379-0.742 0.742 5.112 5.112h-12.727v1.049h12.727z"
-                        fill="#000009"
-                      >
-                        {" "}
-                      </path>{" "}
-                    </g>
-                  </svg>
+                    </path>{" "}
+                    <path
+                      d="M13.906 21.637l0.742 0.742 6.378-6.379-6.378-6.379-0.742 0.742 5.112 5.112h-12.727v1.049h12.727z"
+                      fill="#000009"
+                    >
+                      {" "}
+                    </path>{" "}
+                  </g>
+                </svg>
               </div>
               {/* <div className="swiper-pagination"></div> */}
             </div>
@@ -226,125 +207,38 @@ export function LandingPage() {
   ]}/> */}
       </div>
 
-      <div className="flex flex-col items-center">
-        <div className="sm:w-[70%]">
-          <h3 className="heading text-[#D3D3D3]" id="Videos">
+      <div className="flex flex-col landing2 mt-[2rem] items-center">
+        <div className="">
+          <h3 className="heading text-[#ffffff]" id="Videos">
             VIDEOS
           </h3>
-          <div className="flex flex-col items-center">
-            <Swiper
-              effect={"coverflow"}
-              grabCursor={true}
-              centeredSlides={true}
-              loop={true}
-              slidesPerView={"auto"}
-              coverflowEffect={{
-                rotate: 0,
-                stretch: 0,
-                depth: 100,
-                modifier: 2.5,
-              }}
-              pagination={{ el: ".swiper-pagination", clickable: true }}
-              navigation={{
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-                clickable: true,
-              }}
-              modules={[EffectCoverflow, Pagination, Navigation]}
-              className="swiper_container w-[90vw] sm:w-[70vw] md:w-[70vw] lg:w-[70vw]"
-            >
-              <SwiperSlide className="flex flex-col items-center">
-                <ReactPlayer
-                  url="https://www.youtube.com/watch?v=d2RVycC06gI"
-                  width="100%"
-                />
-              </SwiperSlide>
-              <SwiperSlide className="">
-                <ReactPlayer
-                  url="https://www.youtube.com/watch?v=9WJlIM1K0pk"
-                  width="100%"
-                />
-              </SwiperSlide>
-              <SwiperSlide className="">
-                <ReactPlayer
-                  url="https://www.youtube.com/watch?v=r20yhnxwdnA"
-                  width="100%"
-                />
-              </SwiperSlide>
-
-              <div className="slider-controler mt-[-12rem] ">
-                <div className="swiper-button-prev bg-[#D3D3D3] slider-arrow">
-                  <svg
-                    viewBox="-3 0 32 32"
-                    version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    fill="#000009"
-                  >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      {" "}
-                      <g id="icomoon-ignore"> </g>{" "}
-                      <path
-                        d="M13.114 2.887c-7.243 0-13.114 5.871-13.114 13.113s5.871 13.113 13.114 13.113c7.242 0 13.112-5.871 13.112-13.113s-5.87-13.113-13.112-13.113zM13.114 28.064c-6.653 0-12.065-5.412-12.065-12.064s5.412-12.063 12.065-12.063c6.652 0 12.063 5.412 12.063 12.063s-5.411 12.064-12.063 12.064z"
-                        fill="#000009"
-                      >
-                        {" "}
-                      </path>{" "}
-                      <path
-                        d="M12.318 10.363l-0.742-0.742-6.379 6.379 6.379 6.379 0.742-0.742-5.113-5.113h12.726v-1.049h-12.726z"
-                        fill="#000009"
-                      >
-                        {" "}
-                      </path>{" "}
-                    </g>
-                  </svg>
-                </div>
-                <div className="swiper-button-next bg-[#D3D3D3] slider-arrow">
-                  <svg
-                    viewBox="-3 0 32 32"
-                    version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    fill="#000009"
-                  >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      {" "}
-                      <g id="icomoon-ignore"> </g>{" "}
-                      <path
-                        d="M13.11 29.113c7.243 0 13.113-5.871 13.113-13.113s-5.87-13.113-13.113-13.113c-7.242 0-13.113 5.871-13.113 13.113s5.871 13.113 13.113 13.113zM13.11 3.936c6.652 0 12.064 5.412 12.064 12.064s-5.412 12.064-12.064 12.064c-6.653 0-12.064-5.412-12.064-12.064s5.411-12.064 12.064-12.064z"
-                        fill="#000009"
-                      >
-                        {" "}
-                      </path>{" "}
-                      <path
-                        d="M13.906 21.637l0.742 0.742 6.378-6.379-6.378-6.379-0.742 0.742 5.112 5.112h-12.727v1.049h12.727z"
-                        fill="#000009"
-                      >
-                        {" "}
-                      </path>{" "}
-                    </g>
-                  </svg>
-                </div>
-              </div>
-            </Swiper>
-          </div>
+          <ReactPlayer
+            url="https://www.youtube.com/watch?v=qHzWq9e5sxw"
+            width="90vw"
+            height="35vh"
+          />
+          <ReactPlayer
+            url="https://www.youtube.com/watch?v=e0pGiEQgelg"
+            width="90vw"
+            height="35vh"
+            className="my-[1.5rem]"
+          />
+          <ReactPlayer
+            url="https://www.youtube.com/watch?v=ovBBPTk8nRc"
+            width="90vw"
+            height="35vh"
+          />
+          <ReactPlayer
+            url="https://www.youtube.com/watch?v=9_7NMl5W91A"
+            width="90vw"
+            height="35vh"
+            className="my-[1.5rem]"
+          />
         </div>
       </div>
 
       <div className="flex flex-col items-center">
-        <div className="bg-[#D3D3D3] rounded-[20px] w-[100vw] pb-[2rem] mt-[-5rem] flex flex-col items-center">
+        <div className="bg-[#a9de9c] w-[100vw] pb-[2rem] mt-[rem] flex flex-col items-center">
           <h3 className="heading text-[#000009]" id="Tour">
             Tour & Shows
           </h3>
@@ -354,12 +248,12 @@ export function LandingPage() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center landing3">
         <div className="pt-[2rem] pb-[4rem] sm:w-[70%] flex flex-col items-center">
-          <h3 className="heading text-[#D3D3D3]" id="Newsletter">
+          <h3 className="heading text-[#ffffff]" id="Newsletter">
             Newsletter
           </h3>
-          <p className=" text-[#D3D3D3] text-3xl text-center w-[80%]">
+          <p className=" text-[#ffffff] text-3xl text-center w-[80%]">
             So glad you are here. I usually share things with you first before
             anyone else. Join below so you dont miss out.
           </p>
@@ -374,7 +268,7 @@ export function LandingPage() {
               }}
             />
             <button
-              className="border text-[#D3D3D3] bg-[#000009] text-white rounded-[10px] text-3xl py-[0.3rem] px-[1rem]"
+              className="border rounded-[10px] text-[#ffffff] font-semibold bg-[#a9de9c] text-3xl py-[0.3rem] px-[1rem]"
               onClick={handleSubmit}
             >
               {loading ? <LoadingSpinner /> : "join"}
@@ -395,7 +289,7 @@ export function LandingPage() {
         </div>
       </div>
 
-      <div className="bg-[#D3D3D3] rounded-t-[20px] py-[2rem]">
+      <div className="bg-[#a9de9c] py-[2rem]">
         <div className="flex justify-center">
           <a href="https://www.instagram.com/dai_verse/" target="_Blank">
             <svg
@@ -670,7 +564,7 @@ export function LandingPage() {
           <h3 className="text-3xl mb-[1rem] text-[#000009] mt-[3rem] subheading">
             For Bookings & Enquires
           </h3>
-          <p className="text-xl subheading text-[#000009]">
+          <p className="text-xl bodyfont text-[#000009]">
             EMAIL: DAIVERSE@LONGITUDEPROMOTIONS.COM
           </p>
         </div>

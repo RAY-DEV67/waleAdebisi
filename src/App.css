@@ -68,20 +68,24 @@ body {
   padding: 1rem 0;
   font-size: 5rem;
   text-align: center;
-  font-family: 'Modak', cursive;
+  font-family: 'Berkshire Swash', cursive;
 }
-.bodyfont{
-  font-family: 'Delicious Handrawn', cursive;
+.liyafont{
+  font-family: 'Shrikhand', cursive;
 }
 .headingfont{
-  font-family: 'Modak', cursive;
+  font-family: 'Berkshire Swash', cursive;
 }
 .subheading{
-  font-family: 'Bebas Neue', cursive;
+  font-family: 'Berkshire Swash', cursive;
 }
+.bodyfont{
+  font-family: 'Livvic', sans-serif;
+  }
+/*
 .abouttext{
   font-family: 'Almarai', sans-serif;
-}
+} */
 .swiper_container {
   height: 55rem;
   padding: 2rem 0;
@@ -235,15 +239,11 @@ body {
 }
 .nav-image{
   z-index: -100000;
+  height: 100vh;
 }
 .overlay-Dark{
   background-color: #000009;
-  opacity: 0.9;
-  /* z-index: 1; */
-}
-.overlay-Light{
-  background-color: #323b0a;
-  opacity: 0.9;
+  opacity: 0.6;
   /* z-index: 1; */
 }
 .navbar{
@@ -268,5 +268,34 @@ body {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+.landing2 {
+  background-image: url("./assets/liyamain.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.landing3 {
+  background-image: url("./assets/liya3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
+}
+.landing {
+  background-image: url("./assets/liya2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  animation: zoom-in-fade 8s ease-in-out;
+}
+@keyframes zoom-in-fade {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 1;
   }
 }
