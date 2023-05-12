@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import Liya from "../assets/liyanav.jpg";
-import logo from "../assets/logo.png";
+import Liya from "../assets/liya3.jpg";
 import { useState, useEffect, useContext } from "react";
 import { Theme, Settheme } from "../App";
 import { Link } from "react-router-dom";
@@ -33,7 +32,7 @@ export function Navbar() {
     <div className="w-[100vw] flex flex-col lg:items-center">
       <div
       className={theme === "Dark" ? `flex justify-between w-[100vw] px-[1rem] fixed z-10 items-center ${
-        scrolled ? "bg-[#bf94d1] navbar mb-[2rem]" : "bg-transparent"
+        scrolled ? "bg-[#d07eec] navbar mb-[2rem]" : "bg-transparent"
       }` : theme === "Light" ? `flex justify-between px-[1rem] fixed z-10 items-center ${
         scrolled ? "bg-[#e59002] navbar mb-[2rem]" : "bg-[#e59002]"
       }` : ""}
@@ -128,18 +127,18 @@ export function Navbar() {
       <div
         className={
           showMobile
-            ? `${theme === "Dark" ? "bg-[#000009]" : theme === "Light" ? "bg-white" : ""} h-[100vh] top-0 w-[100vw] flex flex-col items-center justify-center ml-[-1rem] fixed show`
+            ? `${theme === "Dark" ? "bg-[#d07eec]" : theme === "Light" ? "bg-white" : ""} h-[100vh] top-0 w-[100vw] flex flex-col items-center justify-center ml-[-1rem] fixed show`
             : "bg-[#000009] h-[100vh] no top-0 w-[100vw] flex flex-col items-center justify-center fixed"
         }
       >
         <img src={Liya} alt="Daiverse" className="absolute nav-image"/>
         <div className={
           showMobile
-            ? `${theme === "Dark" ? "overlay-Dark" : theme === "Light" ? "overlay-Light" : ""} h-[100vh] top-0 w-[100vw] flex flex-col items-center justify-center ml-[-1rem] fixed show`
+            ? `${theme === "Dark" ? "overlay-Dark" : theme === "Light" ? "overlay-Light" : ""} h-[100vh] top-0 w-[100vw] flex flex-col items-center justify-center fixed show`
             : "bg-[#323b0a] h-[100vh] no top-0 w-[100vw] flex flex-col items-center justify-center fixed"
         }></div>
         <p
-          className="absolute top-7 nav text-[5vw] left-[85%]"
+          className="absolute headingfont top-7 nav text-[5vw] left-[85%]"
           onClick={() => {
             setshowMobile(false);
           }}

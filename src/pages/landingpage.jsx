@@ -42,11 +42,11 @@ export function LandingPage() {
   };
 
   return (
-    <div className="bg-[#bf94d1]">
+    <div className="bg-[#d07eec]">
       <div className="landing h-[100vh]"></div>
       <div className="flex flex-col items-center" id="Music">
         <div className="container sm:w-[70%]">
-          <h1 className="heading text-[#ffffff]">Music</h1>
+          <h1 className=" text-[#ffffff] font-semibold headfont">Music</h1>
           <Swiper
             effect={"coverflow"}
             grabCursor={true}
@@ -209,37 +209,37 @@ export function LandingPage() {
 
       <div className="flex flex-col landing2 mt-[2rem] items-center">
         <div className="">
-          <h3 className="heading text-[#ffffff]" id="Videos">
+          <h3 className="headfont font-semibold text-[#ffffff]" id="Videos">
             VIDEOS
           </h3>
           <ReactPlayer
             url="https://www.youtube.com/watch?v=qHzWq9e5sxw"
             width="90vw"
-            height="35vh"
+            height="30vh"
           />
           <ReactPlayer
             url="https://www.youtube.com/watch?v=e0pGiEQgelg"
             width="90vw"
-            height="35vh"
+            height="30vh"
             className="my-[1.5rem]"
           />
           <ReactPlayer
             url="https://www.youtube.com/watch?v=ovBBPTk8nRc"
             width="90vw"
-            height="35vh"
+            height="30vh"
           />
           <ReactPlayer
             url="https://www.youtube.com/watch?v=9_7NMl5W91A"
             width="90vw"
-            height="35vh"
+            height="30vh"
             className="my-[1.5rem]"
           />
         </div>
       </div>
 
       <div className="flex flex-col items-center">
-        <div className="bg-[#a9de9c] w-[100vw] pb-[2rem] mt-[rem] flex flex-col items-center">
-          <h3 className="heading text-[#000009]" id="Tour">
+        <div className="bg-[#d9d9d9] w-[100vw] pb-[2rem] mt-[rem] flex flex-col items-center">
+          <h3 className="headfont font-semibold text-[#000009]" id="Tour">
             Tour & Shows
           </h3>
           <p className=" text-[#000009] text-3xl w-[80%] text-center abouttext">
@@ -250,7 +250,7 @@ export function LandingPage() {
 
       <div className="flex flex-col items-center landing3">
         <div className="pt-[2rem] pb-[4rem] sm:w-[70%] flex flex-col items-center">
-          <h3 className="heading text-[#ffffff]" id="Newsletter">
+          <h3 className="headfont font-semibold text-[#ffffff]" id="Newsletter">
             Newsletter
           </h3>
           <p className=" text-[#ffffff] text-3xl text-center w-[80%]">
@@ -289,7 +289,7 @@ export function LandingPage() {
         </div>
       </div>
 
-      <div className="bg-[#a9de9c] py-[2rem]">
+      <div className="bg-[#d9d9d9] py-[2rem]">
         <div className="flex justify-center">
           <a href="https://www.instagram.com/dai_verse/" target="_Blank">
             <svg

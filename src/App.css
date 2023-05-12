@@ -239,12 +239,10 @@ body {
 }
 .nav-image{
   z-index: -100000;
-  height: 100vh;
 }
 .overlay-Dark{
   background-color: #000009;
-  opacity: 0.6;
-  /* z-index: 1; */
+  opacity: 0.5;
 }
 .navbar{
   /* background-color: transparent; */
@@ -298,4 +296,16 @@ body {
     transform: scale(1.4);
     opacity: 1;
   }
+}
+.headfont{
+  font-family: 'Rubik Puddles', cursive;
+  padding: 1rem 0;
+  font-size: 5rem;
+  text-align: center;
+}
+.headcolor{
+  background: linear-gradient(to right, #f32170,
+#ff6b08, #cf23cf, #eedd44);
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
 }
