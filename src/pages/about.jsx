@@ -1,7 +1,7 @@
-import Daiverse1 from "../assets/sunday1.webp";
-import Daiverse2 from "../assets/sunday3.webp";
-import Daiverse3 from "../assets/aboutb.png";
-import Daiverse4 from "../assets/about2b.png";
+import ReactPlayer from "react-player";
+import Liya1 from "../assets/aboutliya1.jpg";
+import Liya2 from "../assets/aboutliya2.jpg";
+import liyags from "../assets/liyags.mp4";
 import { Theme } from "../App";
 import { useContext } from "react";
 
@@ -9,85 +9,68 @@ export function About() {
   const theme = useContext(Theme);
 
   return (
-    <div className="pt-[15%] h-[100%]">
-      <h1 className="heading text-[#e59002]">About</h1>
+    <div className="pt-[15%] h-[100%] bg-[#d07eec] lg:pt-[5%]">
+      <h1 className="text-[#ffffff] headfont font-semibold">Biography</h1>
       <div className="flex flex-col items-center">
         <div className="w-[90%]">
 <div className="flex flex-col items-center">
 <div className="flex flex-col items-center lg:flex-row lg:w-[70vw]">
          <div>
-         <h2 className="text-3xl lg:text-5xl font-bold mb-[1rem] text-[#e59002] subheading">
-            BIOGRAPHY
-          </h2>
-          <p className="text-xl lg:text-2xl abouttext">
-            Akandu Ifeanyichukwu Chineme popularly known as Dai Verse was born
-            on the 23rd of May, 2000, an indigene of Nwagene LGA, Imo State,
-            Nigeria.
+         <div className="flex flex-col items-center lg:justify-between lg:flex-row lg:w-[70vw]">
+         <p className="text-2xl lg:text-3xl lg:w-[50%] abouttext">
+            Liya's music is an extension of her love for culture and how it revolves around her as she moves between R&B, pop, and soul music. Born and raised in Lagos, Liya, birth name Suliyat Modasola Abdusalami, had always been drawn to music from as early as age nine despite prompts to turn her attention to other affairs.
           </p>
-          <h3 className="text-3xl lg:text-5xl font-bold my-[1rem] text-[#e59002] subheading">
-            EDUCATIONAL BACKGROUND
-          </h3>
-          <p className="text-xl lg:text-2xl abouttext">
-            He graduated with honors from the Federal University of Technology,
-            Owerri (FUTO) where he studied Agricultural Economics
-          </p>
-          <h3 className="text-3xl lg:text-5xl font-bold my-[1rem] text-[#e59002] subheading">
-            DAI VERSE - THE NAME
-          </h3>
-          <p className="text-xl lg:text-2xl abouttext">
-            His unique, eye-catching stagename Dai Verse has quite the
-            backstory; being a 'jack of all trades', engaging in different
-            occupations to make ends meet and also being an avid sportsman that
-            could play quite a number of sports such as : football, basketball,
-            volleyball, table tennis and badminton, a friend of his noticed and
-            praised his industriousness as being 'diverse'; hence the Cocaine
-            crooner locked onto that fitting description, made a stylish
-            adjustment and today we have Dai Verse.
-          </p>
-         </div>
 
           <img
             alt="Daiverse"
-            src={
-              theme === "Dark" ? Daiverse1 : theme === "Light" ? Daiverse3 : ""
-            }
-            className="w-[100vw] h-[65rem] mt-[1rem] sm:w-[50vw] lg:h-[45rem] lg:w-[30vw] object-cover"
-          />
+            src={Liya1}           
+              className="my-[2rem] w-[100vw] h-[65rem] mt-[1rem] sm:w-[50vw] lg:h-[45rem] lg:w-[30vw] object-cover"/>
          </div>
+
+         </div>
+         </div>
+         
+<div className="flex flex-col items-center lg:flex-row lg:w-[70vw]">
+<div>
+<p className="text-2xl lg:text-3xl lg:w-[80%] abouttext">
+          In 2020, Liya met Nigerian superstar, Davido, and was signed after playing him a song becoming the first woman signed to DMW imprint. Her debut single on the label, "Melo", released in December 2020, was a big success, positioning her as one of the ascendant Nigerian stars to look out for in 2021.
+          </p>
+          <p className="text-2xl mt-[1rem] lg:w-[80%] lg:text-3xl abouttext">
+         Liya's debut project titled Alari sees her push her powerful voice in different places often at the same time while providing an update on  the themes and feelings that are orbiting her life. On the project's eponymous opener she expresses her interest in a love interest whatever the cost of her affection may be with her impassioned shrills giving the song a cinematic feel. Her forthcomin project bears the fruit of her hard work with sounds attuned to her eclectic voice and firmly rooted in Yoruba culture. 
+          </p>
+</div>
+
+          <img
+            alt="Daiverse"
+            src={Liya2}           
+              className="my-[2rem] w-[100vw] h-[65rem] mt-[1rem] sm:w-[50vw] lg:h-[45rem] lg:w-[30vw] object-cover"/>
+
+</div>
 </div>
 <div className="flex flex-col items-center">
-<div className="flex flex-col items-center lg:flex-row lg:w-[70vw]">
-  <div>
+<div className="flex flex-col items-center lg:w-[70vw]">
+  <div className="">
     
-<h3 className="text-3xl lg:text-5xl font-bold mb-[1rem] mt-[3rem] text-[#e59002] subheading">
-            MUSIC CAREER
+<h3 className="lg:text-5xl font-semibold mb-[1rem] mt-[3rem] text-[#ffffff] headfont">
+            HIGHLIGHTS
           </h3>
-          <p className="text-xl lg:text-2xl abouttext">
-            Dai Verse did backup singing for a couple of artistes while in
-            school before officially starting, and releasing, music in 2019. His
-            discography, currently, boasts a well- received, fast rising single
-            : Cocaine. Dai Verse -who is currently managed by LONGITUDE - has 2
-            collaborations so far : Colorado (with Zugo) and Sweet Daddy (with
-            Buju).
-          </p>
+          <div className="text-[2rem]">
+          <h3 className="lg:text-5xl font-bold mb-[1rem] lg:mb-[2rem] text-[#ffffff]" id="Videos">
+          - Global spin performance for the recording academy 2022
+          </h3>
+          <video autoPlay muted playsInline loop className="w-[100vw]">
+          <source src={liyags} type="video/mp4" className="" />
+        </video>
+
+        </div>
   </div>
 
-          <img
-            alt="Daiverse"
-            src={
-              theme === "Dark" ? Daiverse2 : theme === "Light" ? Daiverse4 : ""
-            }
-            onClick={() => {
-              setcheck("new");
-            }}
-            className="w-[100vw] h-[65rem] mt-[1rem] sm:w-[50vw] lg:h-[45rem] lg:w-[30vw] object-cover main"
-          />
 </div>
 </div>
         </div>
       </div>
       
-      <div className="bg-[#D3D3D3] rounded-t-[20px] py-[2rem]">
+      <div className="bg-[#D3D3D3] mt-[2rem] rounded-t-[20px] py-[2rem]">
         <div className="flex justify-center">
           <a href="https://www.instagram.com/dai_verse/" target="_Blank">
             <svg

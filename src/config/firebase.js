@@ -17,14 +17,14 @@ import "firebase/compat/storage"
 
 // Your web app's Firebase configuration
 const firebaseApp = firebase.initializeApp( {
-    apiKey: "AIzaSyBL2FyQsZq-5tSLd__qkA-5hgbn4KoeRig",
-    authDomain: "daiverse-c2807.firebaseapp.com",
-    projectId: "daiverse-c2807",
-    storageBucket: "daiverse-c2807.appspot.com",
-    messagingSenderId: "877728472026",
-    appId: "1:877728472026:web:6ad61b0cbcf118e9e1fee3",
-    measurementId: "G-N5HFRKL253"
-  });
+  apiKey: "AIzaSyBHaVDehp9CLtsBPwmoQk5rVylXhrCQaVw",
+  authDomain: "liya-2e0e2.firebaseapp.com",
+  projectId: "liya-2e0e2",
+  storageBucket: "liya-2e0e2.appspot.com",
+  messagingSenderId: "657331508989",
+  appId: "1:657331508989:web:86bfb5dfbaef28061b1094",
+  measurementId: "G-NXBDWS2E3H"
+});
 
 // Initialize Firebase
 const app = firebaseApp;

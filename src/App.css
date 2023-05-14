@@ -285,7 +285,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  animation: zoom-in-fade 8s ease-in-out;
+  animation: zoom-in-fade 4s ease-in-out;
 }
 @keyframes zoom-in-fade {
   0% {
@@ -297,15 +297,21 @@ body {
     opacity: 1;
   }
 }
+.nextbtn{
+  z-index: 200000
+}
 .headfont{
   font-family: 'Rubik Puddles', cursive;
   padding: 1rem 0;
   font-size: 5rem;
   text-align: center;
 }
-.headcolor{
+.subheadfont{
+  font-family: 'Rubik Puddles', cursive;
+}
+/* .headcolor{
   background: linear-gradient(to right, #f32170,
 #ff6b08, #cf23cf, #eedd44);
 -webkit-text-fill-color: transparent;
 -webkit-background-clip: text;
-}
+} */

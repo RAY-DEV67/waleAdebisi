@@ -127,11 +127,11 @@ export function Navbar() {
       <div
         className={
           showMobile
-            ? `${theme === "Dark" ? "bg-[#d07eec]" : theme === "Light" ? "bg-white" : ""} h-[100vh] top-0 w-[100vw] flex flex-col items-center justify-center ml-[-1rem] fixed show`
+            ? `${theme === "Dark" ? "bg-[#d07eec] landing2" : theme === "Light" ? "bg-white" : ""} h-[100vh] top-0 w-[100vw] flex flex-col items-center justify-center ml-[-1rem] fixed show`
             : "bg-[#000009] h-[100vh] no top-0 w-[100vw] flex flex-col items-center justify-center fixed"
         }
       >
-        <img src={Liya} alt="Daiverse" className="absolute nav-image"/>
+        {/* <img src={Liya} alt="Daiverse" className="absolute nav-image"/> */}
         <div className={
           showMobile
             ? `${theme === "Dark" ? "overlay-Dark" : theme === "Light" ? "overlay-Light" : ""} h-[100vh] top-0 w-[100vw] flex flex-col items-center justify-center fixed show`
