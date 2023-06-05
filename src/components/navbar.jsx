@@ -31,9 +31,7 @@ export function Navbar() {
   return (
     <div className="w-[100vw] flex flex-col lg:items-center">
       <div
-      className={theme === "Dark" ? `flex justify-between w-[100vw] px-[1rem] fixed z-10 items-center ${
-        scrolled ? "bg-[#d07eec] navbar mb-[2rem]" : "bg-transparent"
-      }` : theme === "Light" ? `flex justify-between px-[1rem] fixed z-10 items-center ${
+      className={theme === "Dark" ? `flex py-[1rem] h-[50px] justify-between w-[100vw] px-[1rem] fixed z-10 items-center bg-transparent` : theme === "Light" ? `flex justify-between px-[1rem] fixed z-10 items-center ${
         scrolled ? "bg-[#e59002] navbar mb-[2rem]" : "bg-[#e59002]"
       }` : ""}
     >
@@ -119,9 +117,8 @@ export function Navbar() {
           Newsletter
         </a>
       </div>
-      <p className="text-6xl liyafont mt-[0.5rem] mr-[2rem] lg:mr-[-4.5rem] lg:w-[20%]"
-        onClick={() => {navigate("/")}}>LIYA</p>
-      
+     <img className="left-[30%] lg:left-[60%] absolute lg:w-[50vw]" src="https://res.cloudinary.com/dvl38skbc/image/upload/v1685966683/streetically/streetically_logo_NEW_azksli.png"/>
+    
       
 
       <div

@@ -42,11 +42,42 @@ export function LandingPage() {
   };
 
   return (
-    <div className="bg-[#d07eec]">
+    <div className="bg-[#000009]">
       <div className="landing h-[100vh]"></div>
+      <div className="flex flex-col items-center mt-[2rem]">
+        <img
+          className="w-[50vw] border-y py-[2rem]"
+          src="https://res.cloudinary.com/dvl38skbc/image/upload/v1685968017/streetically/DAE6A0C0-E8CA-44B5-AAAD-D6A0527BB686_bypce9.jpg"
+        />
+      </div>
+      <div className="flex flex-col items-center mt-[1rem]">
+        <div className="w-[90vw] text-center border-b pb-[1rem]">
+          <h2 className="text-[2.5rem] font-bold">WHAT MAKES US UNIQUE</h2>
+          <p className="text-[1.5rem]">
+            Streetically is a team of photographers and videographers who
+            capture weddings in a unique and edgy style with a touch of
+            editorial feel. Our clients are friends, because when their big day
+            comes we get to CELEBRATE with them. We have a heart for exploration
+            and love to capture couples who are adventurous and love to create
+            something breathtaking. Today is documentary, Tomorrow is history
+            and that lasts a lifetime. Your wedding day is your story, its
+            beautiful, its messy, its totally unique and we are wild about
+            capturing every part of it. Our style of edits is the vintage /
+            editorial feel. We don’t skin retouch moments.
+          </p>
+          <div className="flex flex-col items-center">
+            <a
+              target="_Blank"
+              href="https://music.apple.com/ng/album/alari-ep/1579315531"
+              className="border uppercase border-[#D3D3D3] text-[#ffffff] font-semibold text-2xl px-[2.5rem] m-[1rem] py-[0.3rem]"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
       <div className="flex flex-col items-center" id="Music">
         <div className="container sm:w-[70%]">
-          <h1 className=" text-[#ffffff] font-semibold headfont">Music</h1>
           <Swiper
             effect={"coverflow"}
             grabCursor={true}
@@ -68,68 +99,78 @@ export function LandingPage() {
             modules={[EffectCoverflow, Pagination, Navigation]}
             className="swiper_container mb-[-10rem] sm:mb-[0rem]"
           >
-            <SwiperSlide className="musics flex flex-col items-center">
-              <img alt="Daiverse" src={alari} className="" />
-              <p className="text-center text-3xl text-[#ffffff] font-bold mb-[1rem] mt-[-2rem] sm:mt-[1rem]">
-                Alari EP
-              </p>
-              <div className="flex flex-col items-center">
-                <a
-                  target="_Blank"
-                  href="https://music.apple.com/ng/album/alari-ep/1579315531"
-                  className="border uppercase border-[#D3D3D3] text-[#ffffff] font-semibold bg-[#a9de9c] text-2xl px-[2.5rem] mt-[1rem] py-[0.3rem]"
-                >
-                  Stream
-                </a>
-              </div>
+            <SwiperSlide className="flex flex-col items-center">
+              <img
+                alt="Streetically"
+                src="https://res.cloudinary.com/dvl38skbc/image/upload/v1685969439/streetically/BB30C438-6800-4A73-8F35-AAB8918820C2_u47lv2.jpg"
+                className=""
+              />
             </SwiperSlide>
-            <SwiperSlide className="musics flex flex-col items-center">
-              <img alt="Daiverse" src={adua} className="" />
-              <p className="text-center sm:mt-[1rem] text-3xl text-[#ffffff] font-bold mb-[1rem] mt-[-2rem]">
-                Adua Remix
-              </p>
-              <div className="flex flex-col items-center">
-                <a
-                  target="_Blank"
-                  href="https://music.apple.com/ng/album/adua-remix/1616889387?i=1616889389"
-                  className="border text-[#ffffff] font-semibold bg-[#a9de9c] border-[#D3D3D3] text-2xl px-[2.5rem] mt-[1rem] py-[0.3rem]"
-                >
-                  Stream
-                </a>
-              </div>
+            <SwiperSlide className=" flex flex-col items-center">
+              <img
+                alt="Streetically"
+                src="https://res.cloudinary.com/dvl38skbc/image/upload/v1685969439/streetically/6636CA56-E493-46FC-A17A-99D6FE628B7C_wn9imi.jpg"
+                className=""
+              />
             </SwiperSlide>
-            <SwiperSlide className="musics flex flex-col items-center">
-              <img alt="Daiverse" src={going} className="" />
-              <p className="text-center sm:mt-[1rem] text-3xl text-[#ffffff] font-bold mb-[1rem] mt-[-2rem]">
-                Izz Going (Skalala)
-              </p>
-              <div className="flex flex-col items-center">
-                <a
-                  target="_Blank"
-                  href="https://music.apple.com/ng/album/izz-going-skalala-single/1648708783"
-                  className="border border-[#D3D3D3] text-[#ffffff] font-semibold bg-[#a9de9c] text-2xl px-[2.5rem] mt-[1rem] py-[0.3rem]"
-                >
-                  Stream
-                </a>
-              </div>
+            <SwiperSlide className="flex flex-col items-center">
+              <img
+                alt="Streetically"
+                src="https://res.cloudinary.com/dvl38skbc/image/upload/v1685969439/streetically/CF15FDB3-3F6F-414D-9AD0-63FD27B53E59_h0aoiw.jpg"
+                className=""
+              />
             </SwiperSlide>
-            <SwiperSlide className="musics flex flex-col items-center">
-              <img alt="Daiverse" src={melo} className="" />
-              <p className="text-center sm:mt-[1rem] text-3xl text-[#ffffff] font-bold mb-[1rem] mt-[-2rem]">
-                Melo
-              </p>
-              <div className="flex flex-col items-center">
-                <a
-                  target="_Blank"
-                  href="https://music.apple.com/ng/album/melo/1543038826?i=1543038831"
-                  className="border border-[#D3D3D3] text-[#ffffff] font-semibold bg-[#a9de9c] text-2xl px-[2.5rem] mt-[1rem] py-[0.3rem]"
-                >
-                  Stream
-                </a>
-              </div>
+            <SwiperSlide className="flex flex-col items-center">
+              <img
+                alt="Streetically"
+                src="https://res.cloudinary.com/dvl38skbc/image/upload/v1685969439/streetically/321E2215-0921-4B99-A6D6-C75C3B6D5532_uiqy3r.jpg"
+                className=""
+              />
+            </SwiperSlide>
+            <SwiperSlide className="flex flex-col items-center">
+              <img
+                alt="Streetically"
+                src="https://res.cloudinary.com/dvl38skbc/image/upload/v1685969438/streetically/9CF12D66-0598-4E42-BCE5-BDB41C75D93E_u8vf7d.jpg"
+                className=""
+              />
+            </SwiperSlide>
+            <SwiperSlide className="flex flex-col items-center">
+              <img
+                alt="Streetically"
+                src="https://res.cloudinary.com/dvl38skbc/image/upload/v1685969438/streetically/F9E5C153-A577-4BD6-BFA7-08BE713E7D88_skz4n6.jpg"
+                className=""
+              />
+            </SwiperSlide>
+            <SwiperSlide className="flex flex-col items-center">
+              <img
+                alt="Streetically"
+                src="https://res.cloudinary.com/dvl38skbc/image/upload/v1685969438/streetically/E6F44508-6AAE-46C9-BB0C-73D6C76215D4_zrk9li.jpg"
+                className=""
+              />
+            </SwiperSlide>
+            <SwiperSlide className="flex flex-col items-center">
+              <img
+                alt="Streetically"
+                src="https://res.cloudinary.com/dvl38skbc/image/upload/v1685969438/streetically/7A3B0784-76FF-4E7B-A638-D446BEDDE669_wkgje4.jpg"
+                className=""
+              />
+            </SwiperSlide>
+            <SwiperSlide className="flex flex-col items-center">
+              <img
+                alt="Streetically"
+                src="https://res.cloudinary.com/dvl38skbc/image/upload/v1685969438/streetically/F121316D-E89D-4516-9449-4C09AE242FF4_cmje3d.jpg"
+                className=""
+              />
+            </SwiperSlide>
+            <SwiperSlide className="flex flex-col items-center">
+              <img
+                alt="Streetically"
+                src="https://res.cloudinary.com/dvl38skbc/image/upload/v1685969438/streetically/32616990-3948-438C-8591-5610B274596D_ixdggs.jpg"
+                className=""
+              />
             </SwiperSlide>
 
-            <div className="slider-controler hidden mt-[1rem] sm:block">
+            <div className="slider-controler mt-[-2rem] mb-[2rem] sm:block">
               <div className="swiper-button-prev bg-[#D3D3D3] slider-arrow">
                 <svg
                   viewBox="-3 0 32 32"
@@ -198,101 +239,11 @@ export function LandingPage() {
             </div>
           </Swiper>
         </div>
-        {/* <ImageSlider   images={[
-    Daiverse1,
-    "https://example.com/image2.jpg",
-    "https://example.com/image3.jpg",
-    "https://example.com/image2.jpg",
-    "https://example.com/image3.jpg"
-  ]}/> */}
       </div>
 
-      <div className="flex flex-col landing2 mt-[2rem] items-center">
-        <div className="">
-          <h3 className="headfont font-semibold text-[#ffffff]" id="Videos">
-            VIDEOS
-          </h3>
-          <ReactPlayer
-            url="https://www.youtube.com/watch?v=qHzWq9e5sxw"
-            width="90vw"
-            height="30vh"
-            className=""
-          />
-          <ReactPlayer
-            url="https://www.youtube.com/watch?v=e0pGiEQgelg"
-            width="90vw"
-            height="30vh"
-            className="my-[1.5rem]"
-          />
-          <ReactPlayer
-            url="https://www.youtube.com/watch?v=ovBBPTk8nRc"
-            width="90vw"
-            height="30vh"
-          />
-          <ReactPlayer
-            url="https://www.youtube.com/watch?v=9_7NMl5W91A"
-            width="90vw"
-            height="30vh"
-            className="my-[1.5rem]"
-          />
-        </div>
-      </div>
-
-      <div className="flex flex-col items-center">
-        <div className="bg-[#d9d9d9] w-[100vw] pb-[2rem] mt-[rem] flex flex-col items-center">
-          <h3 className="headfont font-semibold text-[#000009]" id="Tour">
-            Tour & Shows
-          </h3>
-          <p className=" text-[#000009] text-3xl w-[80%] text-center abouttext">
-            THERE IS CURRENTLY NO INCOMING TOUR / SHOW
-          </p>
-        </div>
-      </div>
-
-      <div className="flex flex-col items-center landing3">
-        <div className="pt-[2rem] pb-[4rem] sm:w-[70%] flex flex-col items-center">
-          <h3 className="headfont font-semibold text-[#ffffff]" id="Newsletter">
-            Newsletter
-          </h3>
-          <p className=" text-[#ffffff] text-3xl text-center w-[80%]">
-            So glad you are here. I usually share things with you first before
-            anyone else. Join below so you dont miss out.
-          </p>
-          <form className="flex items-center justify-center w-[100%] mt-[2rem]">
-            <input
-              type="email"
-              placeholder="Email"
-              className="border border-[#D3D3D3] text-[#000009] w-[50%] rounded-[10px] text-3xl py-[0.3rem] px-[1rem]"
-              name="email"
-              onChange={(e) => {
-                setemail(e.target.value);
-              }}
-            />
-            <button
-              className="border rounded-[10px] text-[#ffffff] font-semibold bg-[#a9de9c] text-3xl py-[0.3rem] px-[1rem]"
-              onClick={handleSubmit}
-            >
-              {loading ? <LoadingSpinner /> : "join"}
-            </button>
-          </form>
-          <p>
-            {" "}
-            {welcome ? (
-              <p className="border mt-[1rem] bg-[#000009] text-white rounded-[10px] text-2xl opacity-100 welcomeshow py-[0.3rem] px-[1rem]">
-                WELCOME TO THE CLAN 🤩
-              </p>
-            ) : (
-              <p className="border bg-[#e59002] welcome text-white rounded-[10px] text-xs opacity-0">
-                WELCOME TO THE CLAN 🤩
-              </p>
-            )}
-          </p>
-        </div>
-      </div>
-
-      <div className="bg-[#d9d9d9] py-[2rem]">
+      <div className="bg-[#d9d9d9] py-[2rem] mt-[5rem]">
         <div className="flex justify-center">
-          <a href="https://www.instagram.com/yes_liya/" target="_Blank">
+          <a href="https://www.instagram.com/streetically" target="_Blank">
             <svg
               width="20px"
               viewBox="0 0 20 20"
@@ -340,7 +291,7 @@ export function LandingPage() {
             </svg>
           </a>
           <a
-            href="https://twitter.com/Yes_Liya"
+            href="https://twitter.com/streetically/"
             target="_Blank"
             className="mx-[0.5rem]"
           >
@@ -390,156 +341,19 @@ export function LandingPage() {
               </g>
             </svg>
           </a>
-          <a
-            href="https://www.youtube.com/@liya7172"
-            target="_Blank"
-            className="mx-[0.5rem]"
-          >
-            <svg
-              width="20px"
-              fill="#000000"
-              viewBox="0 -4 32 32"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="xMidYMid"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                {" "}
-                <path d="M30.722,20.579 C30.137,21.894 28.628,23.085 27.211,23.348 C27.066,23.375 23.603,24.000 16.010,24.000 L15.990,24.000 C8.398,24.000 4.932,23.375 4.788,23.349 C3.371,23.085 1.861,21.894 1.275,20.578 C1.223,20.461 0.001,17.647 0.001,12.000 C0.001,6.353 1.223,3.538 1.275,3.421 C1.861,2.105 3.371,0.915 4.788,0.652 C4.932,0.625 8.398,-0.000 15.990,-0.000 C23.603,-0.000 27.066,0.625 27.210,0.651 C28.628,0.915 30.137,2.105 30.723,3.420 C30.775,3.538 32.000,6.353 32.000,12.000 C32.000,17.647 30.775,20.461 30.722,20.579 ZM28.893,4.230 C28.581,3.529 27.603,2.759 26.845,2.618 C26.813,2.612 23.386,2.000 16.010,2.000 C8.615,2.000 5.185,2.612 5.152,2.618 C4.394,2.759 3.417,3.529 3.104,4.234 C3.094,4.255 2.002,6.829 2.002,12.000 C2.002,17.170 3.094,19.744 3.106,19.770 C3.417,20.471 4.394,21.241 5.153,21.382 C5.185,21.388 8.615,22.000 15.990,22.000 L16.010,22.000 C23.386,22.000 26.813,21.388 26.846,21.382 C27.604,21.241 28.581,20.471 28.894,19.766 C28.904,19.744 29.998,17.170 29.998,12.000 C29.998,6.830 28.904,4.255 28.893,4.230 ZM13.541,17.846 C13.379,17.949 13.193,18.000 13.008,18.000 C12.842,18.000 12.676,17.959 12.525,17.875 C12.206,17.699 12.008,17.364 12.008,17.000 L12.008,7.000 C12.008,6.637 12.204,6.303 12.521,6.127 C12.838,5.950 13.227,5.958 13.534,6.149 L21.553,11.105 C21.846,11.286 22.026,11.606 22.027,11.951 C22.028,12.296 21.852,12.618 21.560,12.801 L13.541,17.846 ZM14.009,8.794 L14.009,15.189 L19.137,11.963 L14.009,8.794 Z"></path>{" "}
-              </g>
-            </svg>
-          </a>
-          <a
-            href="https://www.tiktok.com/@yes_liya_"
-            target="_Blank"
-          >
-            <svg
-              width="20px"
-              fill="#000000"
-              viewBox="0 0 32 32"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                {" "}
-                <title>tiktok</title>{" "}
-                <path d="M16.656 1.029c1.637-0.025 3.262-0.012 4.886-0.025 0.054 2.031 0.878 3.859 2.189 5.213l-0.002-0.002c1.411 1.271 3.247 2.095 5.271 2.235l0.028 0.002v5.036c-1.912-0.048-3.71-0.489-5.331-1.247l0.082 0.034c-0.784-0.377-1.447-0.764-2.077-1.196l0.052 0.034c-0.012 3.649 0.012 7.298-0.025 10.934-0.103 1.853-0.719 3.543-1.707 4.954l0.020-0.031c-1.652 2.366-4.328 3.919-7.371 4.011l-0.014 0c-0.123 0.006-0.268 0.009-0.414 0.009-1.73 0-3.347-0.482-4.725-1.319l0.040 0.023c-2.508-1.509-4.238-4.091-4.558-7.094l-0.004-0.041c-0.025-0.625-0.037-1.25-0.012-1.862 0.49-4.779 4.494-8.476 9.361-8.476 0.547 0 1.083 0.047 1.604 0.136l-0.056-0.008c0.025 1.849-0.050 3.699-0.050 5.548-0.423-0.153-0.911-0.242-1.42-0.242-1.868 0-3.457 1.194-4.045 2.861l-0.009 0.030c-0.133 0.427-0.21 0.918-0.21 1.426 0 0.206 0.013 0.41 0.037 0.61l-0.002-0.024c0.332 2.046 2.086 3.59 4.201 3.59 0.061 0 0.121-0.001 0.181-0.004l-0.009 0c1.463-0.044 2.733-0.831 3.451-1.994l0.010-0.018c0.267-0.372 0.45-0.822 0.511-1.311l0.001-0.014c0.125-2.237 0.075-4.461 0.087-6.698 0.012-5.036-0.012-10.060 0.025-15.083z"></path>{" "}
-              </g>
-            </svg>
-          </a>
-          <a
-            href="https://music.apple.com/ng/artist/liya/1456995480"
-            target="_Blank"
-            className="mx-[0.5rem]"
-          >
-            <svg
-              width="20px"
-              fill="#000000"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <path d="m24 6.124c0-.029.001-.063.001-.097 0-.743-.088-1.465-.253-2.156l.013.063c-.312-1.291-1.1-2.359-2.163-3.031l-.02-.012c-.536-.35-1.168-.604-1.847-.723l-.03-.004c-.463-.084-1.003-.138-1.553-.15h-.011c-.04 0-.083-.01-.124-.013h-12.025c-.152.01-.3.017-.455.026-.791.016-1.542.161-2.242.415l.049-.015c-1.306.501-2.327 1.495-2.853 2.748l-.012.033c-.17.409-.297.885-.36 1.38l-.003.028c-.051.343-.087.751-.1 1.165v.016c0 .032-.007.062-.01.093v12.224c.01.14.017.283.027.424.02.861.202 1.673.516 2.416l-.016-.043c.609 1.364 1.774 2.387 3.199 2.792l.035.009c.377.111.817.192 1.271.227l.022.001c.555.053 1.11.06 1.667.06h11.028c.554 0 1.099-.037 1.633-.107l-.063.007c.864-.096 1.645-.385 2.321-.823l-.021.013c.825-.539 1.47-1.29 1.867-2.176l.013-.032c.166-.383.295-.829.366-1.293l.004-.031c.084-.539.132-1.161.132-1.794 0-.086-.001-.171-.003-.256v.013q0-5.7 0-11.394zm-6.424 3.99v5.712c.001.025.001.054.001.083 0 .407-.09.794-.252 1.14l.007-.017c-.273.562-.771.979-1.373 1.137l-.015.003c-.316.094-.682.156-1.06.173h-.01c-.029.002-.062.002-.096.002-1.033 0-1.871-.838-1.871-1.871 0-.741.431-1.382 1.056-1.685l.011-.005c.293-.14.635-.252.991-.32l.027-.004c.378-.082.758-.153 1.134-.24.264-.045.468-.252.51-.513v-.003c.013-.057.02-.122.02-.189 0-.002 0-.003 0-.005q0-2.723 0-5.443c-.001-.066-.01-.13-.027-.19l.001.005c-.026-.134-.143-.235-.283-.235-.006 0-.012 0-.018.001h.001c-.178.013-.34.036-.499.07l.024-.004q-1.14.225-2.28.456l-3.7.748c-.016 0-.032.01-.048.013-.222.03-.392.219-.392.447 0 .015.001.03.002.045v-.002.13q0 3.9 0 7.801c.001.028.001.062.001.095 0 .408-.079.797-.224 1.152l.007-.021c-.264.614-.792 1.072-1.436 1.235l-.015.003c-.319.096-.687.158-1.067.172h-.008c-.031.002-.067.003-.104.003-.913 0-1.67-.665-1.815-1.536l-.001-.011c-.02-.102-.031-.218-.031-.338 0-.785.485-1.458 1.172-1.733l.013-.004c.315-.127.687-.234 1.072-.305l.036-.005c.287-.06.575-.116.86-.177.341-.05.6-.341.6-.693 0-.007 0-.015 0-.022v.001-.15q0-4.44 0-8.883c0-.002 0-.004 0-.007 0-.129.015-.254.044-.374l-.002.011c.066-.264.277-.466.542-.517l.004-.001c.255-.066.515-.112.774-.165.733-.15 1.466-.3 2.2-.444l2.27-.46c.67-.134 1.34-.27 2.01-.4.181-.042.407-.079.637-.104l.027-.002c.018-.002.04-.004.061-.004.27 0 .489.217.493.485.008.067.012.144.012.222v.001q0 2.865 0 5.732z"></path>
-              </g>
-            </svg>
-          </a>
-          <a
-            href="https://open.spotify.com/artist/2mq44nCfRU63sGf70HAPi0"
-            target="_Blank"
-          >
-            <svg
-              width="20px"
-              viewBox="0 0 20 20"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              fill="#000000"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                {" "}
-                <title>spotify [#162]</title> <desc>Created with Sketch.</desc>{" "}
-                <defs> </defs>{" "}
-                <g
-                  id="Page-1"
-                  stroke="none"
-                  stroke-width="1"
-                  fill="none"
-                  fill-rule="evenodd"
-                >
-                  {" "}
-                  <g
-                    id="Dribbble-Light-Preview"
-                    transform="translate(-140.000000, -7479.000000)"
-                    fill="#000000"
-                  >
-                    {" "}
-                    <g id="icons" transform="translate(56.000000, 160.000000)">
-                      {" "}
-                      <path
-                        d="M99.915,7327.865 C96.692,7325.951 91.375,7325.775 88.297,7326.709 C87.803,7326.858 87.281,7326.58 87.131,7326.085 C86.981,7325.591 87.26,7325.069 87.754,7324.919 C91.287,7323.846 97.159,7324.053 100.87,7326.256 C101.314,7326.52 101.46,7327.094 101.196,7327.538 C100.934,7327.982 100.358,7328.129 99.915,7327.865 L99.915,7327.865 Z M99.81,7330.7 C99.584,7331.067 99.104,7331.182 98.737,7330.957 C96.05,7329.305 91.952,7328.827 88.773,7329.792 C88.36,7329.916 87.925,7329.684 87.8,7329.272 C87.676,7328.86 87.908,7328.425 88.32,7328.3 C91.951,7327.198 96.466,7327.732 99.553,7329.629 C99.92,7329.854 100.035,7330.334 99.81,7330.7 L99.81,7330.7 Z M98.586,7333.423 C98.406,7333.717 98.023,7333.81 97.729,7333.63 C95.381,7332.195 92.425,7331.871 88.944,7332.666 C88.609,7332.743 88.274,7332.533 88.198,7332.197 C88.121,7331.862 88.33,7331.528 88.667,7331.451 C92.476,7330.58 95.743,7330.955 98.379,7332.566 C98.673,7332.746 98.766,7333.129 98.586,7333.423 L98.586,7333.423 Z M94,7319 C88.477,7319 84,7323.477 84,7329 C84,7334.523 88.477,7339 94,7339 C99.523,7339 104,7334.523 104,7329 C104,7323.478 99.523,7319.001 94,7319.001 L94,7319 Z"
-                        id="spotify-[#162]"
-                      >
-                        {" "}
-                      </path>{" "}
-                    </g>{" "}
-                  </g>{" "}
-                </g>{" "}
-              </g>
-            </svg>
-          </a>
-          <a
-            target="_Blank"
-            href="https://audiomack.com/yes_liya"
-            className="ml-[0.5rem]"
-          >
-            <svg
-              width="20px"
-              fill="#000000"
-              viewBox="0 0 24 24"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <path d="M.331 11.378s.542-.089.765.144c.223.233.077.716-.22.724-.296.01-.57.063-.764-.144a.444.444 0 0 1 .219-.724m5.881 3.292c-.052.01-.107-.017-.164-.058-.388-.542-.529-2.393-.707-2.503-.185-.114-.854 1.026-2.186.903-.557-.051-1.124-.412-1.457-.662.03-.42.036-1.403.865-1.083.504.194 1.367.726 2.125-.23.838-1.058 1.3-.75 1.577-.52.277.23.092 1.425.506 1.09.413-.334 2.082-2.41 2.082-2.41s1.292-1.303 1.49.067c.197 1.37 1.04 2.888 1.263 2.845.223-.043 2.822-5.325 3.195-5.666.372-.341 1.625-.296 1.565.578-.06.874-.187 6.308-.187 6.308s-.147 1.531.093.713c.099-.34.206-.645.339-1.003a989.222 989.222 0 0 0 2.278-7.368l.317-1.09a3.592 3.592 0 0 1 .097-.33c.046-.154.076-.255.086-.282.024-.068.092-.12.188-.157.097-.061.2-.064.317-.067.302-.027.69.012 1.04.112.102 0 .212.037.317.112s.006 0 .015.01c.003 0 .005 0 .008.01a.503.503 0 0 1 .098.095c.001 0 .002 0 .004.01a.716.716 0 0 1 .051.073c.196.286.315.814.195 1.75-.3 2.335-.531 7.14-.531 7.14s-.047.229.435-.783c.017-.035.038-.066.058-.098a.42.42 0 0 0 .091-.085c.298-.354 1.097-.563 1.651-.558.234.028.43.087.547.16.218.333.09 1.562.09 1.562-.462.043-1.341.291-1.653.337-.311.046-.785 2.07-1.443 1.863-.658-.207-2.125-1.127-2.125-1.253a98.33 98.33 0 0 1 .152-1.87.152.152 0 0 1 0-.014c.022-.273.003-.392-.123-.12-.109.235-.581 1.736-1.108 3.371-.056.143-1.051 3.156-1.182 3.523-.156.427-.287.753-.377.921-.138.187-.324.304-.583.226-.646-.196-1.465-1.09-1.473-1.31-.015-1.251.06-7.974-.242-7.414-.311.575-2.73 4.561-2.73 4.561-.04.01-.07.01-.106.01-.172-.019-.437-.074-.51-.238-.004-.01-.01-.018-.013-.028l-.014-.04c-.033-.11-.046-.23-.075-.327a40.828 40.828 0 0 0-.463-1.42c-.279-.909-.566-1.837-.613-1.94-.092-.2-.227-.116-.347 0-.54.458-1.687 2.48-2.723 2.59"></path>
-              </g>
-            </svg>
-          </a>
         </div>
         <div className="mx-[1rem]">
-          <h3 className="text-3xl mb-[1rem] text-[#000009] mt-[3rem] subheading">
+          <h3 className="text-3xl mb-[1rem] text-[#000009] mt-[2rem] subheading">
             For Bookings & Enquires
           </h3>
           <p className="text-xl bodyfont text-[#000009]">
-            EMAIL: Yesliyabookings@gmail.com
+          Email: streetically@gmail.com 
+          </p>
+          <p className="text-xl bodyfont text-[#000009]">
+          Whatsapp: +2349011655330
+          </p>
+          <p className="text-xl bodyfont text-[#000009]">
+          Phone: 09011655330
           </p>
         </div>
       </div>
