@@ -6,6 +6,8 @@ import { LandingPage } from './pages/landingpage';
 import { ScrollToTop } from './components/scrolltotop';
 import { useState } from 'react';
 import { About } from './pages/about';
+import { Portfolio } from './pages/portfolio';
+import { Contact } from './pages/contact';
 
 export const Theme = React.createContext();
 export const Settheme = React.createContext();
@@ -24,6 +26,8 @@ function App() {
       <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/About" element={<About />} />
+      <Route path="/Portfolio" element={<Portfolio />} />
+      <Route path="/Contact" element={<Contact />} />
       </Routes>
      </ScrollToTop>
     </Router>

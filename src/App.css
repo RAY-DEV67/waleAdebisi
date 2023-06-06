@@ -269,13 +269,13 @@ body {
   }
 }
 .landing2 {
-  background-image: url("./assets/liyamain.jp");
+  background-image: url("https://res.cloudinary.com/dvl38skbc/image/upload/v1685968017/streetically/DAE6A0C0-E8CA-44B5-AAAD-D6A0527BB686_bypce9.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 .landing3 {
-  background-image: url("./assets/liya3.jp");
+  background-image: url("./assets/liya3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 20%;
@@ -314,3 +314,10 @@ body {
 -webkit-text-fill-color: transparent;
 -webkit-background-clip: text;
 } */
+.portfolioButton{
+  z-index: 300000;
+}
+.navigation{
+  z-index: 30000000;
+  position: relative;
+}

@@ -29,7 +29,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <div className="w-[100vw] flex flex-col lg:items-center">
+    <div className="w-[100vw] flex flex-col navigation lg:items-center">
       <div
       className={theme === "Dark" ? `flex py-[1rem] h-[50px] justify-between w-[100vw] px-[1rem] fixed z-10 items-center bg-transparent` : theme === "Light" ? `flex justify-between px-[1rem] fixed z-10 items-center ${
         scrolled ? "bg-[#e59002] navbar mb-[2rem]" : "bg-[#e59002]"
@@ -124,7 +124,7 @@ export function Navbar() {
       <div
         className={
           showMobile
-            ? `${theme === "Dark" ? "bg-[#d07eec] landing2" : theme === "Light" ? "bg-white" : ""} h-[100vh] top-0 w-[100vw] flex flex-col items-center justify-center ml-[-1rem] fixed show`
+            ? `${theme === "Dark" ? "bg-[#000000] landing2" : theme === "Light" ? "bg-white" : ""} h-[100vh] top-0 w-[100vw] flex flex-col items-center justify-center ml-[-1rem] fixed show`
             : "bg-[#000009] h-[100vh] no top-0 w-[100vw] flex flex-col items-center justify-center fixed"
         }
       >
@@ -142,38 +142,26 @@ export function Navbar() {
         >
           X
         </p>
+        <Link to="/" className="nav"  onClick={() => {
+            setshowMobile(false);
+          }}>
+        <p className="text-[6vw] text-[#D3D3D3] headingfont font-bold">Home</p>
+        </Link>
         <Link to="/About" className="nav"  onClick={() => {
             setshowMobile(false);
           }}>
-        <p className="text-[6vw] text-[#D3D3D3] headingfont font-bold">About</p>
+        <p className="text-[6vw] text-[#D3D3D3] headingfont font-bold my-[1rem]">About</p>
         </Link>
-        <a
-          className="text-[6vw] my-[2rem] nav headingfont text-[#D3D3D3] font-bold"
-          href="#Music"
-          onClick={() => {
+        <Link to="/Portfolio" className="nav"  onClick={() => {
             setshowMobile(false);
-          }}
-        >
-          Music
-        </a>
-        <a
-          className="text-[6vw] nav headingfont text-[#D3D3D3] font-bold"
-          href="#Videos"
-          onClick={() => {
+          }}>
+        <p className="text-[6vw] text-[#D3D3D3] headingfont font-bold">Portfolio</p>
+        </Link>
+        <Link to="/Contact" className="nav"  onClick={() => {
             setshowMobile(false);
-          }}
-        >
-          Videos
-        </a>
-        <a
-          className="text-[6vw] mt-[2rem] nav headingfont text-[#D3D3D3] font-bold"
-          href="#Newsletter"
-          onClick={() => {
-            setshowMobile(false);
-          }}
-        >
-          Newsletter
-        </a>
+          }}>
+        <p className="text-[6vw] text-[#D3D3D3] headingfont font-bold mt-[1rem]">Contact</p>
+        </Link>
       </div>
     </div>
 

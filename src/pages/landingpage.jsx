@@ -47,7 +47,7 @@ export function LandingPage() {
       <div className="flex flex-col items-center mt-[2rem]">
         <img
           className="w-[50vw] border-y py-[2rem]"
-          src="https://res.cloudinary.com/dvl38skbc/image/upload/v1685968017/streetically/DAE6A0C0-E8CA-44B5-AAAD-D6A0527BB686_bypce9.jpg"
+          src="https://res.cloudinary.com/dvl38skbc/image/upload/v1685984499/streetically/D050B59C-5C56-4A65-9F71-B84E3857C93E_qlfewh.jpg"
         />
       </div>
       <div className="flex flex-col items-center mt-[1rem]">
