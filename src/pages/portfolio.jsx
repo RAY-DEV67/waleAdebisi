@@ -66,7 +66,7 @@ export function Portfolio() {
 
   return (
     <div className="">
-      <div className="flex flex-col items-center lg:top-[13%] pt-[70px] lg:z-[-1]">
+      <div className="flex flex-col items-center h-[100vh] lg:top-[13%] pt-[70px] lg:z-[-1]">
         <p className="font-bold text-4xl text-center border-y border-[#010101] py-[1rem]">
           Portfolio
         </p>

@@ -29,7 +29,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <div className="w-[100vw] flex flex-col navigation lg:items-center">
+    <div className="w-[100vw] flex flex-col lg:items-center">
       <div
       className={theme === "Dark" ? `flex py-[1rem] h-[50px] justify-between w-[100vw] px-[1rem] fixed z-10 items-center bg-transparent` : theme === "Light" ? `flex justify-between px-[1rem] fixed z-10 items-center ${
         scrolled ? "bg-[#e59002] navbar mb-[2rem]" : "bg-[#e59002]"
@@ -117,7 +117,7 @@ export function Navbar() {
           Newsletter
         </a>
       </div>
-     <img className="left-[30%] lg:left-[60%] absolute lg:w-[50vw]" src="https://res.cloudinary.com/dvl38skbc/image/upload/v1685966683/streetically/streetically_logo_NEW_azksli.png"/>
+     <img className="left-[30%] lg:left-[60%] absolute lg:w-[50vw] logoImage" src="https://res.cloudinary.com/dvl38skbc/image/upload/v1685966683/streetically/streetically_logo_NEW_azksli.png"/>
     
       
 

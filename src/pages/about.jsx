@@ -9,9 +9,9 @@ export function About() {
   const theme = useContext(Theme);
 
   return (
-    <div className="pt-[15%] h-[100%] bg-[#d07eec] lg:pt-[5%]">
-      <h1 className="text-[#ffffff] headfont font-semibold">Biography</h1>
-      <div className="flex flex-col items-center">
+    <div className="pt-[15%] h-[100vh] lg:pt-[5%]">
+      <h1 className="text-[#ffffff] headfont font-semibold">About Us</h1>
+      {/* <div className="flex flex-col items-center">
         <div className="w-[90%]">
 <div className="flex flex-col items-center">
 <div className="flex flex-col items-center lg:flex-row lg:w-[70vw]">
@@ -322,7 +322,7 @@ export function About() {
             EMAIL: Yesliyabookings@gmail.com
           </p>
         </div>
-      </div>
+      </div> */}
          </div>
   );
 }

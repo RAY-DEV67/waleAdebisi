@@ -204,7 +204,7 @@ body {
 }
 .main{
   animation: zoom-in-fade 2s ease-in-out;
-  z-index: -10rem;
+  /* z-index: -10rem; */
 }
 @keyframes zoom-in-fade {
   0% {
@@ -221,7 +221,7 @@ body {
   filter: blur(0);
   transform: translateY(0);
   transition: all 1s ease-in-out;
-  z-index: 2000;
+  /* z-index: 200000000000000000000; */
 }
 .welcomeshow{
   filter: blur(0);
@@ -238,7 +238,7 @@ body {
   transform: translateY(100%)
 }
 .nav-image{
-  z-index: -100000;
+  /* z-index: -100000; */
 }
 .overlay-Dark{
   background-color: #000009;
@@ -249,7 +249,7 @@ body {
   box-shadow: 0px 0px 7px;
 }
 .nav{
-  z-index: 2000;
+  z-index: 2;
 }
 .loading-spinner {
   width: 15px;
@@ -315,9 +315,14 @@ body {
 -webkit-background-clip: text;
 } */
 .portfolioButton{
-  z-index: 300000;
+  z-index: 3
 }
-.navigation{
-  z-index: 30000000;
-  position: relative;
+/* .logoImage{
+z-index: 60000000000000
+} */
+.nav-z{
+  margin-top: -10rem;
+  z-index: -1;
+  position: absolute
+
 }
