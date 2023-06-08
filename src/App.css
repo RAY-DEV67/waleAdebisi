@@ -286,6 +286,12 @@ body {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
+.aboutlanding {
+  background-image: url("https://res.cloudinary.com/dvl38skbc/image/upload/v1686158374/streetically/B10A5F0F-3729-44DE-AE5B-454761CFA2BA_wmcddd.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
 @keyframes zoom-in-fade {
   0% {
     transform: scale(1);

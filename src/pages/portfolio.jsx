@@ -70,6 +70,7 @@ export function Portfolio() {
         <p className="font-bold text-4xl text-center border-y border-[#010101] py-[1rem]">
           Portfolio
         </p>
+        <p className="text-[2rem] w-[80vw] text-center"> We are known for outstanding luxury work, we take pride in the experience we create for our clients</p>
         <div className="flex relative portfolioButton p-[1rem] text-[2rem]">
           <p
             onClick={() => setportfolio("Engagements")}

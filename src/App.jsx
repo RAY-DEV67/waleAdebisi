@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { About } from './pages/about';
 import { Portfolio } from './pages/portfolio';
 import { Contact } from './pages/contact';
+import { AddPicture } from './pages/addPictures';
 
 export const Theme = React.createContext();
 export const Settheme = React.createContext();
@@ -28,6 +29,7 @@ function App() {
       <Route path="/About" element={<About />} />
       <Route path="/Portfolio" element={<Portfolio />} />
       <Route path="/Contact" element={<Contact />} />
+      <Route path="/AddPicture" element={<AddPicture />} />
       </Routes>
      </ScrollToTop>
     </Router>
