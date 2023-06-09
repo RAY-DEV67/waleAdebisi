@@ -195,7 +195,7 @@ export function Navbar() {
           </svg>
         </div>
         
-        <div className="hidden lg:flex">
+        <div className="hidden lg:flex lg:mr-[1rem]">
           <Link
             to="/About"
             className="nav"
@@ -231,7 +231,7 @@ export function Navbar() {
           </a>
         </div>
         <img
-          className="left-[20%] lg:left-[60%] absolute lg:w-[50vw] w-[60vw] logoImage"
+          className="left-[20%] lg:left-[20%] absolute lg:w-[50vw] w-[60vw] logoImage"
           src="https://res.cloudinary.com/dvl38skbc/image/upload/v1685966683/streetically/streetically_logo_NEW_azksli.png"
         />
 
@@ -288,19 +288,30 @@ export function Navbar() {
               setshowMobile(false);
             }}
           >
-            <p className="text-[6vw] text-[#D3D3D3] headingfont font-bold my-[1rem]">
+            <p className="text-[6vw] text-[#D3D3D3] headingfont font-bold mt-[1rem]">
               About
             </p>
           </Link>
           <Link
-            to="/Portfolio"
+            to="/Weddings"
             className="nav"
             onClick={() => {
               setshowMobile(false);
             }}
           >
             <p className="text-[6vw] text-[#D3D3D3] headingfont font-bold">
-              Portfolio
+              Weddings
+            </p>
+          </Link>
+          <Link
+            to="/Engagements"
+            className="nav"
+            onClick={() => {
+              setshowMobile(false);
+            }}
+          >
+            <p className="text-[6vw] text-[#D3D3D3] headingfont font-bold">
+              Engagements
             </p>
           </Link>
           <Link
@@ -310,7 +321,7 @@ export function Navbar() {
               setshowMobile(false);
             }}
           >
-            <p className="text-[6vw] text-[#D3D3D3] headingfont font-bold mt-[1rem]">
+            <p className="text-[6vw] text-[#D3D3D3] headingfont font-bold">
               Contact
             </p>
           </Link>

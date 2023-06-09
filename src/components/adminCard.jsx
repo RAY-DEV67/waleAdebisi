@@ -15,6 +15,27 @@ import { useNavigate } from "react-router-dom";
 
 
 export function AdminCard(props) {
+
+  const removePicture = async () => {
+    setloading(true)
+    try {
+
+      const docRef = collection(db, "Products");
+      const CartToDeleteQuery = query(
+        docRef
+      );
+
+      const CartToDeleteData = await getDocs(CartToDeleteQuery);
+      const CartToDelete = doc(db, "Products");
+      await deleteDoc(CartToDelete);
+      window.location.reload()
+      console.log("DocumentDeleted");
+      setloading(false)
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   const { post } = props;
 
   return (
@@ -27,7 +48,7 @@ export function AdminCard(props) {
       />
 
     </div>
-    <button className="bg-red-500">Delete</button>
+    <button className="bg-red-500 py-[1rem] px-[2rem] text-[2rem]" onClick={() => {removePicture()}}>Delete</button>
         </div>
   );
 }

@@ -2,9 +2,11 @@
 import db from "../config/firebase";
 import { addDoc, collection } from "firebase/firestore";
 import { Link } from "react-router-dom";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect, useRef } from "react";
 import { Theme } from "../App";
 import { Swiper, SwiperSlide } from "swiper/react";
+import testimony1 from "../assets/testimony1.jpg"
+import testimony2 from "../assets/testimony2.jpg"
 
 // Import Swiper styles
 import "swiper/css";
@@ -37,6 +39,34 @@ export function LandingPage() {
       setwelcome(false);
     }, 4000);
   };
+
+  const colors = [testimony1, testimony2];
+  const delay = 5000;
+    const [index, setIndex] = useState(0);
+    const timeoutRef = useRef(null);
+  
+    function resetTimeout() {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    }
+  
+    useEffect(() => {
+      resetTimeout();
+      timeoutRef.current = setTimeout(
+        () =>
+          setIndex((prevIndex) =>
+            prevIndex === colors.length - 1 ? 0 : prevIndex + 1
+          ),
+        delay
+      );
+  
+      return () => {
+        resetTimeout();
+      };
+    }, [index]);
+  
+  
 
   return (
     <div className="bg-[#000009]">
@@ -237,8 +267,32 @@ export function LandingPage() {
           </Swiper>
         </div>
       </div>
+      <div className="slideshow">
+      <div
+        className="slideshowSlider"
+        style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
+      >
+        {colors.map((backgroundColor, index) => (
+          <div
+            className="slide"
+            key={index}
+          >
+            <img src={backgroundColor}/>
+          </div>
+        ))}
+      </div>
+    </div>
 
 <Footer/>
     </div>
   );
 }
+
+
+
+
+
+
+
+
+

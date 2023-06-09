@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { TopCard } from "../components/topcard";
 
-export function Portfolio() {
+export function Weddings() {
   //   const { product } = useParams();
   const navigate = useNavigate();
 
@@ -20,7 +20,7 @@ export function Portfolio() {
   useEffect(() => {
     setloading(true);
     setempty(false);
-    db.collection("Products").where("category", "==", portfolio)
+    db.collection("Products").where("category", "==", "Weddings")
       .get()
       .then((collections) => {
         const cloths = collections.docs.map((cloths) => {
@@ -40,28 +40,6 @@ export function Portfolio() {
   return (
     <div className="">
       <div className="flex flex-col items-center lg:top-[13%] pt-[70px] lg:z-[-1]">
-        <p className="font-bold text-4xl text-center border-y border-[#010101] py-[1rem]">
-          Portfolio
-        </p>
-        <p className="text-[2rem] w-[80vw] text-center"> We are known for outstanding luxury work, we take pride in the experience we create for our clients</p>
-        <div className="flex relative portfolioButton p-[1rem] text-[2rem]">
-          <p
-            onClick={() => setportfolio("Engagements")}
-            className={`mr-[1rem] border p-[1rem] ${
-              portfolio === "Engagements" ? "bg-white text-black" : ""
-            }`}
-          >
-            Engagements
-          </p>
-          <p
-            onClick={() => setportfolio("Weddings")}
-            className={`mr-[1rem] border p-[1rem] ${
-              portfolio === "Weddings" ? "bg-white text-black" : ""
-            }`}
-          >
-            Weddings
-          </p>
-        </div>
         <div className="mb-[5rem] flex flex-wrap gap-3 w-[90vw] items-center justify-center mt-[1rem]">
           {clothsList.map((post, index) => {
             return (

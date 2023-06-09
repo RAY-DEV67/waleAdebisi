@@ -6,7 +6,8 @@ import { LandingPage } from './pages/landingpage';
 import { ScrollToTop } from './components/scrolltotop';
 import { useState } from 'react';
 import { About } from './pages/about';
-import { Portfolio } from './pages/portfolio';
+import { Weddings } from './pages/wedding';
+import { Engagements } from './pages/engagement';
 import { Contact } from './pages/contact';
 import { AddPicture } from './pages/addPictures';
 import {Admin} from './pages/Admin';
@@ -28,7 +29,8 @@ function App() {
       <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/About" element={<About />} />
-      <Route path="/Portfolio" element={<Portfolio />} />
+      <Route path="/Weddings" element={<Weddings />} />
+      <Route path="/Engagements" element={<Engagements />} />
       <Route path="/Contact" element={<Contact />} />
       <Route path="/AddPicture" element={<AddPicture />} />
       <Route path="/Admin" element={<Admin />} />
