@@ -16,26 +16,31 @@ import { useNavigate } from "react-router-dom";
 
 export function AdminCard(props) {
 
-  const removePicture = async () => {
-    setloading(true)
-    try {
-
-      const docRef = collection(db, "Products");
-      const CartToDeleteQuery = query(
-        docRef
-      );
-
-      const CartToDeleteData = await getDocs(CartToDeleteQuery);
-      const CartToDelete = doc(db, "Products");
-      await deleteDoc(CartToDelete);
-      window.location.reload()
-      console.log("DocumentDeleted");
-      setloading(false)
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
+   const removePicture = async () => {
+      try {
+  
+        const docRef = collection(db, "Products");
+        const CartToDeleteQuery = query(
+          docRef,
+          where("postId", "==", post?.id)
+        );
+  
+        const CartToDeleteData = await getDocs(CartToDeleteQuery);
+        const CartToDelete = doc(db, "Products", post.id);
+        await deleteDoc(CartToDelete);
+        window.location.reload()
+        console.log("DocumentDeleted");
+        if (user) {
+          setCart((prev) =>
+            prev.filter((like) => like.saveId === CartToDeleteData?.docs[0].id)
+          );
+          console.log(Cart);
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    };
+  
   const { post } = props;
 
   return (

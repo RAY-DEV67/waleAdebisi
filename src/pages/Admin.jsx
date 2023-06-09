@@ -3,7 +3,7 @@ import db from "../config/firebase";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { AdminCard } from "../components/admincard";
+import { AdminCard } from "../components/adminCard";
 
 export function Admin() {
   //   const { product } = useParams();
