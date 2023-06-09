@@ -9,6 +9,7 @@ import { About } from './pages/about';
 import { Portfolio } from './pages/portfolio';
 import { Contact } from './pages/contact';
 import { AddPicture } from './pages/addPictures';
+import {Admin} from './pages/Admin';
 
 export const Theme = React.createContext();
 export const Settheme = React.createContext();
@@ -30,6 +31,7 @@ function App() {
       <Route path="/Portfolio" element={<Portfolio />} />
       <Route path="/Contact" element={<Contact />} />
       <Route path="/AddPicture" element={<AddPicture />} />
+      <Route path="/Admin" element={<Admin />} />
       </Routes>
      </ScrollToTop>
     </Router>

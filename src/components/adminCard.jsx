@@ -1,4 +1,3 @@
-// import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../config/firebase";
 import {
   // getDoc,
@@ -15,7 +14,7 @@ import db from "../config/firebase";
 import { useNavigate } from "react-router-dom";
 
 
-export function TopCard(props) {
+export function AdminCard(props) {
   const { post } = props;
 
   return (
@@ -26,9 +25,9 @@ export function TopCard(props) {
         alt="Product"
         className=""
       />
-    </div>
-    
 
+    </div>
+    <button className="bg-red-500">Delete</button>
         </div>
   );
 }

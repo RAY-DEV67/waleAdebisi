@@ -59,18 +59,6 @@ export function AddPicture() {
     if (!isfile) {
       tempErrors.file1 = "Please select a title Picture";
     }
-    if (!title) {
-      tempErrors.title = "Please add a title";
-    }
-    if (!description) {
-      tempErrors.description = "Please input a description for the product";
-    }
-    if (!prices) {
-      tempErrors.price = "Please input a price for the product";
-    }
-    if (isNaN(prices)) {
-      tempErrors.price = "Please input a number";
-    }
     seterrors(tempErrors);
     return Object.keys(tempErrors).length === 0;
   };
@@ -80,21 +68,7 @@ export function AddPicture() {
   const upload = async () => {
     setloading(true)
     const docRef = await addDoc(collection(db, "Products"), {
-      color: color,
-      color2: color2,
-      color3: color3,
-      color4: color4,
-      color5: color5,
-      title: title,
-      description: description,
-      price: Number(prices),
-      // userId: user?.uid,
-      AprilSales: highlight,
       category: category,
-      searchKeywords:
-        `${title.toLowerCase()} ${category?.toLowerCase()}`.split(
-          " "
-        ),
     });
 
     if (isfile == null) return;
@@ -115,71 +89,6 @@ export function AddPicture() {
           });
       });
 
-    if (file2 == null) return;
-    storage
-      .ref("/images/" + file2.name)
-      .put(file2)
-      .on("state_changed", () => {
-        storage
-          .ref("images")
-          .child(file2.name)
-          .getDownloadURL()
-          .then((imgUrl) => {
-            updateDoc(docRef, {
-              images2: imgUrl,
-            });
-          });
-      });
-
-    if (file3 == null) return;
-    storage
-      .ref("/images/" + file3.name)
-      .put(file3)
-      .on("state_changed", () => {
-        storage
-          .ref("images")
-          .child(file3.name)
-          .getDownloadURL()
-          .then((imgUrl) => {
-            updateDoc(docRef, {
-              images3: imgUrl,
-            });
-          });
-      });
-
-      
-    if (file4 == null) return;
-    storage
-      .ref("/images/" + file4.name)
-      .put(file4)
-      .on("state_changed", () => {
-        storage
-          .ref("images")
-          .child(file4.name)
-          .getDownloadURL()
-          .then((imgUrl) => {
-            updateDoc(docRef, {
-              images4: imgUrl,
-            });
-          });
-      });
-
-      
-    if (file5 == null) return;
-    storage
-      .ref("/images/" + file5.name)
-      .put(file5)
-      .on("state_changed", () => {
-        storage
-          .ref("images")
-          .child(file5.name)
-          .getDownloadURL()
-          .then((imgUrl) => {
-            updateDoc(docRef, {
-              images5: imgUrl,
-            });
-          });
-      });
       setloading(false)
   };
 
