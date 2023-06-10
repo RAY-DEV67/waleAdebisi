@@ -6,7 +6,8 @@ export function Contact() {
   
 
   return (
-    <div className="pt-[90px] bg-[#000009] lg:absolute lg:left-[35%] lg:top-[12%] lg:w-[60%]">
+    <div className="flex flex-col items-center bg-[#000009]">
+      <div className="pt-[90px] bg-[#000009] w-[90vw] lg:w-[60%]">
       <div className="flex flex-col items-center">
         <div className="w-[80vw] text-center">
           <p className="text-[3rem]">Contact Us</p>
@@ -87,5 +88,6 @@ export function Contact() {
         </form>
       </div>
     </div>
-  );
+
+    </div>  );
 }

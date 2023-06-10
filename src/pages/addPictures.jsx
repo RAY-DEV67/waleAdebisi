@@ -72,8 +72,8 @@ export function AddPicture() {
   };
 
   return (
-    <div>
-      <div className="pt-[80px] lg:absolute lg:left-[35%] h-[100vh] lg:top-[12%] lg:w-[60%]">
+    <div className="w-[100vw] flex flex-col items-center">
+      <div className="pt-[80px] h-[100vh] lg:w-[60%] w-[90vw]">
           <p className="text-center py-[1rem] text-[2rem]">Add A New Picture</p>
           <div className="flex flex-col items-center">
             <form

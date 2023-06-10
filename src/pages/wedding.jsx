@@ -11,8 +11,6 @@ export function Weddings() {
 
   const [clothsList, setclothsList] = useState([]);
   const [lastDocuments, setlastDocuments] = useState(null);
-  const [isEmpty, setisEmpty] = useState(false);
-  const [hasmore, sethasmore] = useState(true);
   const [loading, setloading] = useState(false);
   const [empty, setempty] = useState(false);
   const [portfolio, setportfolio] = useState("Engagements");
@@ -38,7 +36,7 @@ export function Weddings() {
   
 
   return (
-    <div className="">
+    <div className="bg-[#000009]">
       <div className="flex flex-col items-center lg:top-[13%] pt-[70px] lg:z-[-1]">
       <h1 className="text-[3rem] font-bold">Weddings</h1>
         <div className="mb-[5rem] flex flex-wrap gap-3 w-[90vw] items-center justify-center mt-[1rem]">

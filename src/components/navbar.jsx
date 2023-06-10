@@ -196,6 +196,15 @@ export function Navbar() {
         </div>
         
         <div className="hidden lg:flex lg:mr-[1rem]">
+        <Link
+            to="/"
+            className="nav"
+            onClick={() => {
+              setshowMobile(false);
+            }}
+          >
+            <p className="text-[2vw] headingfont font-bold">Home</p>
+          </Link>
           <Link
             to="/About"
             className="nav"
@@ -203,32 +212,35 @@ export function Navbar() {
               setshowMobile(false);
             }}
           >
-            <p className="text-[2vw] headingfont font-bold">About</p>
+            <p className="text-[2vw] headingfont font-bold mx-[1rem]">About</p>
           </Link>
-          <a
-            className="text-[2vw] headingfont mx-[1rem] nav font-bold"
-            href="#Music"
+          <Link
+            to="/Weddings"
+            className="nav"
             onClick={() => {
               setshowMobile(false);
             }}
           >
-            Music
-          </a>
-          <a
-            className="text-[2vw] headingfont nav font-bold"
-            href="#Videos"
+            <p className="text-[2vw] headingfont font-bold">Weddings</p>
+          </Link>
+          <Link
+            to="/Engagements"
+            className="nav"
             onClick={() => {
               setshowMobile(false);
             }}
           >
-            Videos
-          </a>
-          <a
-            className="text-[2vw] headingfont ml-[1rem] nav font-bold"
-            href="#Newsletter"
+            <p className="text-[2vw] headingfont font-bold mx-[1rem]">Engagements</p>
+          </Link>
+          <Link
+            to="/Contact"
+            className="nav"
+            onClick={() => {
+              setshowMobile(false);
+            }}
           >
-            Newsletter
-          </a>
+            <p className="text-[2vw] headingfont font-bold">Contact</p>
+          </Link>
         </div>
         <img
           className="left-[20%] lg:left-[20%] absolute lg:w-[50vw] w-[60vw] logoImage"
@@ -299,7 +311,7 @@ export function Navbar() {
               setshowMobile(false);
             }}
           >
-            <p className="text-[6vw] text-[#D3D3D3] headingfont font-bold">
+            <p className="text-[6vw] text-[#D3D3D3] my-[1rem] headingfont font-bold">
               Weddings
             </p>
           </Link>
@@ -321,7 +333,7 @@ export function Navbar() {
               setshowMobile(false);
             }}
           >
-            <p className="text-[6vw] text-[#D3D3D3] headingfont font-bold">
+            <p className="text-[6vw] text-[#D3D3D3] mt-[1rem] headingfont font-bold">
               Contact
             </p>
           </Link>

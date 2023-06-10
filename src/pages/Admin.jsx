@@ -41,15 +41,17 @@ export function Admin() {
   return (
     <div className="bg-[#000009]">
       <div className="flex flex-col items-center lg:top-[13%] pt-[70px] lg:z-[-1]">
-      <h1 className="text-[3rem] font-bold mt-[6rem]">All Photos</h1>
+      <div className="lg:flex lg:justify-between lg:items-center w-[90vw] ">
+      <h1 className="text-[3rem] text-center font-bold mt-[6rem]">All Photos</h1>
 
-      <Link to="/AddPicture" className="flex flex-col mt-[1rem] items-center">
-            <div
-              className="border uppercase border-[#D3D3D3] text-[#ffffff] font-semibold text-2xl px-[2.5rem] m-[1rem] py-[0.3rem]"
-            >
-              Upload Pictures
-            </div>
-          </Link>
+<Link to="/AddPicture" className="flex flex-col mt-[1rem] items-center">
+      <div
+        className="border uppercase border-[#D3D3D3] lg:mt-[6rem] text-[#ffffff] font-semibold text-2xl px-[2.5rem] m-[1rem] py-[0.3rem]"
+      >
+        Upload Pictures
+      </div>
+    </Link>
+      </div>
 
         <div className="mb-[5rem] flex flex-wrap gap-3 w-[90vw] items-center justify-center mt-[1rem]">
           {clothsList.map((post, index) => {
