@@ -93,13 +93,11 @@ export function LandingPage() {
             editorial feel. We don’t skin retouch moments.
           </p>
           <Link to="/About" className="flex flex-col items-center">
-            <a
-              target="_Blank"
-              href="https://music.apple.com/ng/album/alari-ep/1579315531"
+            <div
               className="border uppercase border-[#D3D3D3] text-[#ffffff] font-semibold text-2xl px-[2.5rem] m-[1rem] py-[0.3rem]"
             >
               Learn More
-            </a>
+            </div>
           </Link>
         </div>
       </div>

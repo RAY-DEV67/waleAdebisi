@@ -10,7 +10,7 @@ export function About() {
   const theme = useContext(Theme);
 
   return (
-    <div>
+    <div className="bg-[#000009]">
       <div className="aboutlanding h-[70vh] flex flex-col items-start justify-end">
         <h1 className="text-[#ffffff] font-semibold text-[3rem] ml-[1rem] mb-[1rem]">
           About Us

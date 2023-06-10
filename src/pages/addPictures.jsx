@@ -8,48 +8,14 @@ import { updateDoc, addDoc, collection } from "firebase/firestore";
 export function AddPicture() {
 
   const [isfile, setfile1] = useState("");
-  const [file2, setfile2] = useState("");
-  const [file3, setfile3] = useState("");
-  const [file4, setfile4] = useState("");
-  const [file5, setfile5] = useState("");
-  const [prices, setprices] = useState(null);
-  const [title, settitle] = useState("");
-  const [description, setdescription] = useState("");
   const [loading, setloading] = useState(false);
   const [category, setcategory] = useState("Categories");
   const [categories, setcategories] = useState();
   const [highlight, sethighlight] = useState(false);
-  const [color, setcolor] = useState("");
-  const [color2, setcolor2] = useState("");
-  const [color3, setcolor3] = useState("");
-  const [color4, setcolor4] = useState("");
-  const [color5, setcolor5] = useState("");
 
-  // settop()
-
-  function setHigh () {
-    sethighlight(!highlight)
-  }
-
-  // const [values, setvalues] = useState({
-  //   title: "",
-  //   description: "",
-  //   price: Number(0),
-  //   category: "Categories",
-  //   location: "Location",
-  //   Highlight: false,
-  // });
-
-  // console.log(values.price)
 
   const [errors, seterrors] = useState({});
 
-  // const handleChange = (event) => {
-  //   setvalues({
-  //     ...values,
-  //     [event.target.name]: event.target.value,
-  //   });
-  // };
 
   const validateForm = () => {
     let tempErrors = {};
@@ -67,7 +33,7 @@ export function AddPicture() {
 
   const upload = async () => {
     setloading(true)
-    const docRef = await addDoc(collection(db, "Products"), {
+    const docRef = await addDoc(collection(db, "Streetically"), {
       category: category,
     });
 

@@ -11,7 +11,7 @@ import {
 } from "firebase/firestore";
 import { useState, useEffect, useContext } from "react";
 import db from "../config/firebase";
-import { useNavigate } from "react-router-dom";
+
 
 
 export function AdminCard(props) {
@@ -19,14 +19,14 @@ export function AdminCard(props) {
    const removePicture = async () => {
       try {
   
-        const docRef = collection(db, "Products");
+        const docRef = collection(db, "Streetically");
         const CartToDeleteQuery = query(
           docRef,
           where("postId", "==", post?.id)
         );
   
         const CartToDeleteData = await getDocs(CartToDeleteQuery);
-        const CartToDelete = doc(db, "Products", post.id);
+        const CartToDelete = doc(db, "Streetically", post.id);
         await deleteDoc(CartToDelete);
         window.location.reload()
         console.log("DocumentDeleted");
