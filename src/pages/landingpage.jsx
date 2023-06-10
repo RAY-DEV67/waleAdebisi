@@ -79,7 +79,7 @@ export function LandingPage() {
       </div>
       <div className="flex flex-col items-center mt-[1rem]">
         <div className="w-[90vw] text-center border-b pb-[1rem]">
-          <h2 className="text-[2.5rem] font-bold">WHAT MAKES US UNIQUE</h2>
+          <h2 className="text-[2.5rem] font-bold">WHY STREETICALLY</h2>
           <p className="text-[1.5rem]">
             Streetically is a team of photographers and videographers who
             capture weddings in a unique and edgy style with a touch of
@@ -90,7 +90,7 @@ export function LandingPage() {
             and that lasts a lifetime. Your wedding day is your story, its
             beautiful, its messy, its totally unique and we are wild about
             capturing every part of it. Our style of edits is the vintage /
-            editorial feel. We don’t skin retouch moments.
+            editorial feel. 
           </p>
           <Link to="/About" className="flex flex-col items-center">
             <div
