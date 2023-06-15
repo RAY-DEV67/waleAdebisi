@@ -18,7 +18,7 @@ export function Weddings() {
   useEffect(() => {
     setloading(true);
     setempty(false);
-    db.collection("Streetically").where("category", "==", "Weddings")
+    db.collection("Wale Adebisi")
       .get()
       .then((collections) => {
         const cloths = collections.docs.map((cloths) => {
@@ -36,9 +36,9 @@ export function Weddings() {
   
 
   return (
-    <div className="bg-[#000009]">
+    <div className="text-[#d5d1ce] bg-[#000009]">
       <div className="flex flex-col items-center lg:top-[13%] pt-[70px] lg:z-[-1]">
-      <h1 className="text-[3rem] font-bold">Weddings</h1>
+      <h1 className="text-[3rem] font-bold">Portfolio</h1>
         <div className="mb-[5rem] flex flex-wrap gap-3 w-[90vw] items-center justify-center mt-[1rem]">
           {clothsList.map((post, index) => {
             return (

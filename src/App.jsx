@@ -5,9 +5,7 @@ import { Navbar } from './components/navbar';
 import { LandingPage } from './pages/landingpage';
 import { ScrollToTop } from './components/scrolltotop';
 import { useState } from 'react';
-import { About } from './pages/about';
 import { Weddings } from './pages/wedding';
-import { Engagements } from './pages/engagement';
 import { Contact } from './pages/contact';
 import { AddPicture } from './pages/addPictures';
 import {Admin} from './pages/Admin';
@@ -28,9 +26,7 @@ function App() {
      <Navbar/>
       <Routes>
       <Route path="/" element={<LandingPage />} />
-      <Route path="/About" element={<About />} />
-      <Route path="/Weddings" element={<Weddings />} />
-      <Route path="/Engagements" element={<Engagements />} />
+      <Route path="/Portfolio" element={<Weddings />} />
       <Route path="/Contact" element={<Contact />} />
       <Route path="/AddPicture" element={<AddPicture />} />
       <Route path="/Admin" element={<Admin />} />

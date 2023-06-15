@@ -1,15 +1,15 @@
 export function Footer() {
   return (
-    <div className="bg-[#d9d9d9] py-[2rem] mt-[5rem]">
+    <div className="bg-[#d5d1ce] py-[2rem] mt-[5rem]">
       <div className="flex justify-center">
-        <a href="https://www.instagram.com/streetically" target="_Blank">
+        <a href="https://www.instagram.com/waleadebisiphotography" target="_Blank">
           <svg
             width="20px"
             viewBox="0 0 20 20"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
-            fill="#000000"
+            fill="#000009"
           >
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g
@@ -32,7 +32,7 @@ export function Footer() {
                 <g
                   id="Dribbble-Light-Preview"
                   transform="translate(-340.000000, -7439.000000)"
-                  fill="#000000"
+                  fill="#000009"
                 >
                   {" "}
                   <g id="icons" transform="translate(56.000000, 160.000000)">
@@ -50,7 +50,7 @@ export function Footer() {
           </svg>
         </a>
         <a
-          href="https://twitter.com/streetically/"
+          href="https://www.twitter.com/waleadebisiph"
           target="_Blank"
           className="mx-[0.5rem]"
         >
@@ -60,7 +60,7 @@ export function Footer() {
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
-            fill="#000000"
+            fill="#000009"
           >
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g
@@ -83,7 +83,7 @@ export function Footer() {
                 <g
                   id="Dribbble-Light-Preview"
                   transform="translate(-60.000000, -7521.000000)"
-                  fill="#000000"
+                  fill="#000009"
                 >
                   {" "}
                   <g id="icons" transform="translate(56.000000, 160.000000)">
@@ -106,12 +106,8 @@ export function Footer() {
           For Bookings & Enquires
         </h3>
         <p className="text-xl bodyfont text-[#000009]">
-          Email: streetically@gmail.com
+          Email: Sulaimonadebisi27@gmail.com
         </p>
-        <p className="text-xl bodyfont text-[#000009]">
-          Whatsapp: +2349011655330
-        </p>
-        <p className="text-xl bodyfont text-[#000009]">Phone: 09011655330</p>
       </div>
     </div>
   );

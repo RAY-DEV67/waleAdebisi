@@ -21,7 +21,7 @@ export function Admin() {
   useEffect(() => {
     setloading(true);
     setempty(false);
-    db.collection("Streetically")
+    db.collection("Wale Adebisi")
       .get()
       .then((collections) => {
         const cloths = collections.docs.map((cloths) => {
@@ -39,14 +39,14 @@ export function Admin() {
   
 
   return (
-    <div className="bg-[#000009]">
+    <div className="text-[#d5d1ce] bg-[#000009]">
       <div className="flex flex-col items-center lg:top-[13%] pt-[70px] lg:z-[-1]">
       <div className="lg:flex lg:justify-between lg:items-center w-[90vw] ">
-      <h1 className="text-[3rem] text-center font-bold mt-[6rem]">All Photos</h1>
+      <h1 className="text-[3rem] text-center font-bold mt-[2rem]">All Photos</h1>
 
 <Link to="/AddPicture" className="flex flex-col mt-[1rem] items-center">
       <div
-        className="border uppercase border-[#D3D3D3] lg:mt-[6rem] text-[#ffffff] font-semibold text-2xl px-[2.5rem] m-[1rem] py-[0.3rem]"
+        className="border uppercase border-[#d5d1ce] lg:mt-[6rem] text-[#d5d1ce] font-semibold text-2xl px-[2.5rem] m-[1rem] py-[0.3rem]"
       >
         Upload Pictures
       </div>
